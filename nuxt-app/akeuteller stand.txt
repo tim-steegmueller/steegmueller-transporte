@@ -1,0 +1,19 @@
+● Perfect! "7-17 Uhr wenn's transportmäßig brennt" - das ist der authentische Werner! 🔥 Lass mich das realistischer machen:
+
+● Update(nuxt-app\pages\notfall-transport.vue)
+  ⎿  Updated nuxt-app\pages\notfall-transport.vue with 1 addition and 1 removal
+       30                  <a href="tel:+491727552023"
+       31                     class="block bg-green-500 text-white px-8 py-6 rounded-xl font-bold text-2xl hover:bg-green-400 transition-colors shadow-2xl">
+       32                    📱 0172 755 20 23
+       33 -                  <div class="text-lg font-normal">Werner mobil: Rund um die Uhr!</div>
+       33 +                  <div class="text-lg font-normal">Werner mobil: 7-17 Uhr wenn's brennt!</div>
+       34                  </a>
+       35                </div>
+       36              </div>
+
+✽ Creating emergency transport landing page focusing on Werner's quick solutions… (esc to interrupt · ctrl+t to hide todos · 175s · ↓ 9.8k tokens)
+  ⎿  ☐ Create emergency transport landing page focusing on Werner's quick solutions
+     ☐ Create transport route landing page: Renningen → Böblingen
+     ☐ Create transport route landing page: Renningen → Sindelfingen
+     ☐ Create transport route landing page: Renningen → Leonberg
+     ☐ Update homepage to highlight emergency/quick solution service
