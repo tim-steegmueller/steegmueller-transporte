@@ -70,7 +70,17 @@ export default defineNuxtConfig({
   // Better compression and minification
   nitro: {
     compressPublicAssets: true,
-    minify: true
+    minify: true,
+    storage: {
+      redis: {
+        driver: 'redis',
+        host: process.env.REDIS_HOST || 'localhost',
+        port: process.env.REDIS_PORT || 6379
+      }
+    },
+    experimental: {
+      wasm: true
+    }
   },
 
   // SEO and performance improvements

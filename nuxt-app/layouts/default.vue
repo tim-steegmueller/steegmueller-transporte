@@ -27,8 +27,8 @@
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between gap-4 py-4">
-          <NuxtLink to="/" class="flex items-center gap-4 group">
+        <div class="flex items-center justify-between gap-4 py-6">
+          <NuxtLink to="/" class="flex items-center gap-6 group">
             <div class="logo-shell">
               <img
                 src="/images/logos/steegmueller-logo.png"
@@ -39,8 +39,8 @@
               />
             </div>
             <div class="hidden sm:flex flex-col leading-tight">
-              <span class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-brand-600 transition-colors">S. Steegmüller</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Transportdienstleistungen</span>
+              <span class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 transition-colors">S. Steegmüller</span>
+              <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Transportdienstleistungen</span>
             </div>
           </NuxtLink>
 
@@ -159,6 +159,13 @@
     </header>
 
     <main>
+      <!-- Breadcrumbs -->
+      <div v-if="$route.path !== '/'" class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <Breadcrumbs :items="breadcrumbItems" />
+        </div>
+      </div>
+      
       <slot />
     </main>
 
@@ -241,9 +248,51 @@
 import { PhoneIcon, MapPinIcon, MoonIcon, SunIcon } from '@heroicons/vue/24/outline'
 import { ref, inject, computed, onMounted, onUnmounted } from 'vue'
 import CookieBanner from '~/components/CookieBanner.vue'
+import Breadcrumbs from '~/components/Breadcrumbs.vue'
+
+const route = useRoute()
 
 const isDark = inject('isDark', ref(false))
 const toggleDarkMode = inject('toggleDarkMode', () => {})
+
+// Breadcrumb items based on current route
+const breadcrumbItems = computed(() => {
+  const path = route.path
+  const items = []
+  
+  if (path.startsWith('/blog')) {
+    items.push({ label: 'Blog', href: '/blog', icon: 'blog' })
+    
+    if (path !== '/blog') {
+      // Extract blog post title from path
+      const slug = path.replace('/blog/', '')
+      const title = slug.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ')
+      items.push({ label: title })
+    }
+  } else if (path.startsWith('/transport-')) {
+    items.push({ label: 'Transport', href: '/#leistungen', icon: 'transport' })
+    
+    if (path.includes('renningen-boeblingen')) {
+      items.push({ label: 'Renningen → Böblingen' })
+    } else if (path.includes('renningen-stuttgart')) {
+      items.push({ label: 'Renningen → Stuttgart' })
+    } else if (path.includes('renningen-leonberg')) {
+      items.push({ label: 'Renningen → Leonberg' })
+    } else if (path.includes('renningen-sindelfingen')) {
+      items.push({ label: 'Renningen → Sindelfingen' })
+    } else if (path.includes('notfall')) {
+      items.push({ label: 'Notfall-Transport' })
+    }
+  } else if (path === '/impressum') {
+    items.push({ label: 'Impressum' })
+  } else if (path === '/datenschutz') {
+    items.push({ label: 'Datenschutz' })
+  }
+  
+  return items
+})
 
 const navLinks = [
   { label: 'Leistungen', to: '/#leistungen' },
@@ -311,11 +360,11 @@ onMounted(() => {
 }
 
 .logo-shell {
-  @apply h-16 w-16 rounded-2xl bg-white dark:bg-gray-800 shadow-lg shadow-gray-200/80 dark:shadow-black/30 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-0.5;
+  @apply h-20 w-20 rounded-3xl bg-white dark:bg-gray-800 shadow-xl shadow-gray-200/80 dark:shadow-black/40 flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105;
 }
 
 .logo-image {
-  @apply h-14 w-14 object-contain;
+  @apply h-18 w-18 object-contain;
 }
 
 .nav-link {
