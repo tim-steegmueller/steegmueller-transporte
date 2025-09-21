@@ -4,7 +4,7 @@
     <section class="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 py-16">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <div class="inline-flex items-center bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <ArrowRightLeftIcon class="h-4 w-4 mr-2" />
+          <ArrowPathIcon class="h-4 w-4 mr-2" />
           Express Route
         </div>
         <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6">
@@ -295,7 +295,7 @@
 import {
   PhoneIcon,
   DevicePhoneMobileIcon,
-  ArrowRightLeftIcon,
+  ArrowPathIcon,
   MapIcon,
   MapPinIcon,
   ClockIcon,
