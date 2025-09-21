@@ -87,19 +87,16 @@ jobs:
         EOF
         
     - name: 🚀 Deploy to IONOS via SFTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.IONOS_SERVER }}
+        port: 22
         username: ${{ secrets.IONOS_USERNAME }}
         password: ${{ secrets.IONOS_PASSWORD }}
-        local-dir: ./deploy/
-        server-dir: /www/steegmuellertransporte.de/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/.DS_Store
-          **/Thumbs.db
+        local_path: ./deploy/*
+        remote_path: /www/steegmuellertransporte.de/
+        sftp_only: true
+        delete: false
           
     - name: ✅ Deployment successful
       run: |
