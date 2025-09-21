@@ -96,7 +96,7 @@ jobs:
         local_path: ./deploy/*
         remote_path: /www/steegmuellertransporte.de/
         sftp_only: true
-        delete: false
+        delete: true
           
     - name: ✅ Deployment successful
       run: |
