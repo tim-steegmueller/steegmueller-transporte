@@ -364,7 +364,7 @@ onMounted(() => {
 }
 
 .logo-image {
-  @apply h-18 w-18 object-contain;
+  @apply h-20 w-20 object-contain;
 }
 
 .nav-link {
