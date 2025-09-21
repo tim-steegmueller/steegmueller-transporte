@@ -114,11 +114,11 @@ const heroIsVisible = isVisible
 // Slideshow State
 const currentSlide = ref(0)
 const slideImages = ref([
-  { src: '/images/transport/transporter-renningen-holz.jpg', alt: 'Transporter mit Holzladung in Renningen' },
-  { src: '/images/transport/direktfahrt-stuttgart-material.jpg', alt: 'Direktfahrt nach Stuttgart mit Material' },
-  { src: '/images/transport/transport-service-boeblingen.jpg', alt: 'Transport Service in Böblingen' },
-  { src: '/images/transport/transporter-sindelfingen-tour.jpg', alt: 'Transporter auf Sindelfingen Tour' },
-  { src: '/images/transport/transport-fahrzeug-beladen.jpg', alt: 'Transport Fahrzeug beim Beladen' }
+  { src: '/images/transport/transporter-renningen-holz.webp', alt: 'Transporter mit Holzladung in Renningen' },
+  { src: '/images/transport/direktfahrt-stuttgart-material.webp', alt: 'Direktfahrt nach Stuttgart mit Material' },
+  { src: '/images/transport/transport-service-boeblingen.webp', alt: 'Transport Service in Böblingen' },
+  { src: '/images/transport/transporter-sindelfingen-tour.webp', alt: 'Transporter auf Sindelfingen Tour' },
+  { src: '/images/transport/transport-fahrzeug-beladen.webp', alt: 'Transport Fahrzeug beim Beladen' }
 ])
 
 // Slider Controls

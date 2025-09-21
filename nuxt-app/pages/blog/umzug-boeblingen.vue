@@ -47,7 +47,7 @@
         <!-- Featured Image -->
         <div class="mb-8">
           <img loading="lazy" decoding="async"
-            src="/images/transport/transport-service-boeblingen.jpg"
+            src="/images/transport/transport-service-boeblingen.webp"
             alt="Transport Service in Böblingen"
             class="w-full h-64 object-cover rounded-lg shadow-md"
           />

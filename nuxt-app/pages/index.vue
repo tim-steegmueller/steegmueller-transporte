@@ -102,7 +102,7 @@ useHead({
       content: 'Familiengeführter Transportdienstleister seit über 30 Jahren. Direktfahrten, feste Touren und Express-Lösungen für Unternehmen in der Region Stuttgart.'
     },
     { property: 'og:url', content: 'https://steegmuellertransporte.de' },
-    { property: 'og:image', content: 'https://steegmuellertransporte.de/images/transport/transporter-renningen-holz.jpg' },
+          { property: 'og:image', content: 'https://steegmuellertransporte.de/images/transport/transporter-renningen-holz.webp' },
     { property: 'og:locale', content: 'de_DE' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'S. Steegmüller Transportdienstleistungen' },

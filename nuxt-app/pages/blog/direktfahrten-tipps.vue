@@ -37,7 +37,7 @@
         <!-- Featured Image -->
         <div class="mb-8">
           <img
-            src="/images/transport/direktfahrt-stuttgart-material.jpg"
+            src="/images/transport/direktfahrt-stuttgart-material.webp"
             alt="Direktfahrt nach Stuttgart mit Material"
             class="w-full h-64 object-cover rounded-lg shadow-md ring-1 ring-black/5 dark:ring-white/10 brightness-105 contrast-110 saturate-110"
             loading="lazy" decoding="async" />

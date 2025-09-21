@@ -34,7 +34,7 @@
           <article class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
             <NuxtLink to="/blog/direktfahrten-tipps">
               <img
-                src="/images/transport/direktfahrt-stuttgart-material.jpg"
+                src="/images/transport/direktfahrt-stuttgart-material.webp"
                 alt="Direktfahrt Stuttgart"
                 class="w-full h-48 object-cover"
                loading="lazy" decoding="async" />
@@ -59,7 +59,7 @@
           <article class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
             <NuxtLink to="/blog/regionale-transporte">
               <img
-                src="/images/transport/transporter-renningen-holz.jpg"
+                src="/images/transport/transporter-renningen-holz.webp"
                 alt="Transport Renningen"
                 class="w-full h-48 object-cover"
                loading="lazy" decoding="async" />
@@ -84,7 +84,7 @@
           <article class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
             <NuxtLink to="/blog/umzug-boeblingen">
               <img
-                src="/images/transport/transport-service-boeblingen.jpg"
+                src="/images/transport/transport-service-boeblingen.webp"
                 alt="Transport Service"
                 class="w-full h-48 object-cover"
                loading="lazy" decoding="async" />
@@ -109,7 +109,7 @@
           <article class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
             <NuxtLink to="/blog/transportkosten-sparen">
               <img
-                src="/images/transport/transporter-laderaum-offen.jpg"
+                src="/images/transport/transporter-laderaum-offen.webp"
                 alt="Transportkosten sparen"
                 class="w-full h-48 object-cover"
                loading="lazy" decoding="async" />
@@ -134,7 +134,7 @@
           <article class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
             <NuxtLink to="/blog/verpackung-transport">
               <img
-                src="/images/transport/transport-fahrzeug-beladen.jpg"
+                src="/images/transport/transport-fahrzeug-beladen.webp"
                 alt="Verpackung Transport"
                 class="w-full h-48 object-cover"
                loading="lazy" decoding="async" />
@@ -159,7 +159,7 @@
           <article class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
             <NuxtLink to="/blog/logistik-trends-2025">
               <img
-                src="/images/transport/direktfahrt-leonberg-kurz.jpg"
+                src="/images/transport/direktfahrt-leonberg-kurz.webp"
                 alt="Logistik Trends 2025"
                 class="w-full h-48 object-cover"
                loading="lazy" decoding="async" />

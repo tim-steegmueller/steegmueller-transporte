@@ -47,7 +47,7 @@
         <!-- Featured Image -->
         <div class="mb-8">
           <img
-            src="/images/transport/transporter-renningen-holz.jpg"
+            src="/images/transport/transporter-renningen-holz.webp"
             alt="Transporter mit Holzladung in Renningen"
             class="w-full h-64 object-cover rounded-lg shadow-md ring-1 ring-black/5 dark:ring-white/10 brightness-105 contrast-110 saturate-110"
             loading="lazy" decoding="async" />
