@@ -20,6 +20,7 @@
     "@heroicons/vue": "^2.2.0",
     "@nuxt/content": "^3.7.1",
     "@nuxt/image": "^1.11.0",
+    "@nuxtjs/robots": "^5.5.5",
     "@nuxtjs/sitemap": "^7.4.7",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",

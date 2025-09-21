@@ -16,7 +16,7 @@
               <a href="tel:+4971599396183"
                  class="bg-white text-brand-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                 <PhoneIcon class="h-5 w-5 mr-2" />
-                Sofort: 07159 939 61 83
+                Sofort: 07159 / 939 61 83
               </a>
               <a href="#automotive"
                  class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-600 transition-colors flex items-center justify-center">
@@ -217,7 +217,7 @@
                   <div>
                     <div class="font-semibold text-gray-900 dark:text-white">Standard-Transport</div>
                     <a href="tel:+4971599396183" class="text-blue-600 dark:text-blue-400 hover:underline">
-                      07159 939 61 83
+                      07159 / 939 61 83
                     </a>
                   </div>
                 </div>
@@ -279,7 +279,7 @@
           </a>
           <a href="tel:+4971599396183"
              class="bg-white text-brand-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            📞 Standard: 07159 939 61 83
+            📞 Standard: 07159 / 939 61 83
           </a>
         </div>
       </div>
@@ -302,7 +302,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '🚗 Transport Renningen → Sindelfingen Mercedes-Benz ✓ Automotive-Logistik ✓ JIT-Lieferung ✓ Produktions-Notfall Express ☎ 07159 939 61 83'
+      content: '🚗 Transport Renningen → Sindelfingen Mercedes-Benz ✓ Automotive-Logistik ✓ JIT-Lieferung ✓ Produktions-Notfall Express ☎ 07159 / 939 61 83'
     },
     {
       name: 'keywords',

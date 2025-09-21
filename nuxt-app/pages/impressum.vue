@@ -20,7 +20,7 @@
           <div class="mb-6">
             <p class="text-gray-700 dark:text-gray-300 mb-2">
               Telefon: <a href="tel:+491727552023" class="text-brand-600 hover:text-brand-500">0172 755 20 23</a><br>
-              Büro: <a href="tel:+4971599396183" class="text-brand-600 hover:text-brand-500">07159 939 61 83</a><br>
+              Büro: <a href="tel:+4971599396183" class="text-brand-600 hover:text-brand-500">07159 / 939 61 83</a><br>
               E-Mail: <a href="mailto:wswsteegmueller@gmail.com" class="text-brand-600 hover:text-brand-500">wswsteegmueller@gmail.com</a>
             </p>
           </div>

@@ -2,11 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots'],
 
   // Performance optimizations
   routeRules: {
-    '/': { prerender: true }
+    '/**': { prerender: true },
+    '/sitemap.xml': { headers: { 'Content-Type': 'application/xml' } },
+    '/robots.txt': { headers: { 'Content-Type': 'text/plain' } }
   },
 
   image: {
@@ -24,7 +26,36 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://steegmuellertransporte.de'
+    url: 'https://steegmuellertransporte.de',
+    name: 'S. Steegmüller Transportdienstleistungen'
+  },
+
+  sitemap: {
+    hostname: 'https://steegmuellertransporte.de',
+    gzip: true,
+    exclude: ['/admin/**', '/test/**'],
+    routes: [
+      '/transport-renningen-boeblingen',
+      '/transport-renningen-sindelfingen',
+      '/transport-renningen-leonberg',
+      '/transport-renningen-stuttgart',
+      '/notfall-transport',
+      '/blog',
+      '/blog/direktfahrten-tipps',
+      '/blog/transportkosten-sparen',
+      '/blog/verpackung-transport',
+      '/blog/logistik-trends-2025',
+      '/blog/umzug-boeblingen',
+      '/blog/regionale-transporte'
+    ]
+  },
+
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Disallow: ['/admin/', '/test/'],
+    Sitemap: 'https://steegmuellertransporte.de/sitemap.xml',
+    Host: 'https://steegmuellertransporte.de'
   },
 
   css: ['~/assets/css/main.css'],
@@ -46,7 +77,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover',
       htmlAttrs: {
         lang: 'de'
       }

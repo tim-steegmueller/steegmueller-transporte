@@ -16,7 +16,7 @@
               <a href="tel:+4971599396183"
                  class="bg-white text-brand-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                 <PhoneIcon class="h-5 w-5 mr-2" />
-                Sofort: 07159 939 61 83
+                Sofort: 07159 / 939 61 83
               </a>
               <a href="#preise"
                  class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-600 transition-colors flex items-center justify-center">
@@ -198,7 +198,7 @@
                   <div>
                     <div class="font-semibold text-gray-900 dark:text-white">Hotline</div>
                     <a href="tel:+4971599396183" class="text-green-600 dark:text-green-400 hover:underline">
-                      07159 939 61 83
+                      07159 / 939 61 83
                     </a>
                   </div>
                 </div>
@@ -275,7 +275,7 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="tel:+4971599396183"
              class="bg-white text-brand-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            📞 Sofort anrufen: 07159 939 61 83
+            📞 Sofort anrufen: 07159 / 939 61 83
           </a>
           <NuxtLink to="/#kontakt"
                     class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-600 transition-colors">
@@ -303,7 +303,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '🚛 Transport Renningen nach Böblingen ✓ Ab 18€ ✓ Same-Day möglich ✓ Direktfahrt ohne Umladen ✓ Täglich unterwegs ☎ 07159 939 61 83'
+      content: '🚛 Transport Renningen nach Böblingen ✓ Ab 18€ ✓ Same-Day möglich ✓ Direktfahrt ohne Umladen ✓ Täglich unterwegs ☎ 07159 / 939 61 83'
     },
     {
       name: 'keywords',

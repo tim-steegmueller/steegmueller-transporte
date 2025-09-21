@@ -24,7 +24,7 @@
             <div class="space-y-4">
               <a href="tel:+4971599396183"
                  class="block bg-yellow-400 text-red-800 px-8 py-6 rounded-xl font-bold text-2xl hover:bg-yellow-300 transition-colors shadow-2xl">
-                📞 07159 939 61 83
+                📞 07159 / 939 61 83
                 <div class="text-lg font-normal">Büro: Mo-Fr 8-18 Uhr</div>
               </a>
               <a href="tel:+491727552023"
@@ -271,7 +271,7 @@
           </a>
           <a href="tel:+4971599396183"
              class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-red-600 transition-colors">
-            📞 BÜRO: 07159 939 61 83
+            📞 BÜRO: 07159 / 939 61 83
           </a>
         </div>
       </div>

@@ -3,9 +3,7 @@ Allow: /
 
 # Sitemaps für bessere Indexierung
 Sitemap: https://steegmuellertransporte.de/sitemap.xml
-Sitemap: https://steegmuellertransporte.de/__sitemap__/sitemap.xml
 
 # Spezielle Anweisungen für Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
