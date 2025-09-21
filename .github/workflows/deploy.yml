@@ -1,0 +1,121 @@
+name: 🚀 Deploy to IONOS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: 📦 Install pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: 9
+        
+    - name: 📦 Install dependencies
+      run: |
+        cd nuxt-app
+        pnpm install --frozen-lockfile
+        
+    - name: 🏗️ Build Nuxt app
+      run: |
+        cd nuxt-app
+        pnpm generate
+        
+    - name: 📁 Prepare deployment files
+      run: |
+        cd nuxt-app
+        # Create deployment directory
+        mkdir -p ../deploy
+        
+        # Copy generated files
+        cp -r .output/public/* ../deploy/
+        
+        # Create .htaccess for SPA routing
+        cat > ../deploy/.htaccess << 'EOF'
+        RewriteEngine On
+        
+        # Handle Angular and Vue.js routes
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ /index.html [QSA,L]
+        
+        # Enable compression
+        <IfModule mod_deflate.c>
+            AddOutputFilterByType DEFLATE text/plain
+            AddOutputFilterByType DEFLATE text/html
+            AddOutputFilterByType DEFLATE text/xml
+            AddOutputFilterByType DEFLATE text/css
+            AddOutputFilterByType DEFLATE application/xml
+            AddOutputFilterByType DEFLATE application/xhtml+xml
+            AddOutputFilterByType DEFLATE application/rss+xml
+            AddOutputFilterByType DEFLATE application/javascript
+            AddOutputFilterByType DEFLATE application/x-javascript
+        </IfModule>
+        
+        # Cache static assets
+        <IfModule mod_expires.c>
+            ExpiresActive on
+            ExpiresByType text/css "access plus 1 year"
+            ExpiresByType application/javascript "access plus 1 year"
+            ExpiresByType image/png "access plus 1 year"
+            ExpiresByType image/jpg "access plus 1 year"
+            ExpiresByType image/jpeg "access plus 1 year"
+            ExpiresByType image/gif "access plus 1 year"
+            ExpiresByType image/webp "access plus 1 year"
+        </IfModule>
+        
+        # Security headers
+        <IfModule mod_headers.c>
+            Header always set X-Content-Type-Options nosniff
+            Header always set X-Frame-Options DENY
+            Header always set X-XSS-Protection "1; mode=block"
+            Header always set Referrer-Policy "strict-origin-when-cross-origin"
+        </IfModule>
+        EOF
+        
+    - name: 🚀 Deploy to IONOS via SFTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.IONOS_SERVER }}
+        username: ${{ secrets.IONOS_USERNAME }}
+        password: ${{ secrets.IONOS_PASSWORD }}
+        local-dir: ./deploy/
+        server-dir: /www/steegmuellertransporte.de/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/Thumbs.db
+          
+    - name: ✅ Deployment successful
+      run: |
+        echo "🎉 Deployment to IONOS completed successfully!"
+        echo "🌐 Website should be live at: https://steegmuellertransporte.de"
+        
+    - name: 🔔 Notify on success
+      if: success()
+      run: |
+        echo "✅ Build and deployment completed successfully!"
+        echo "🚀 Website deployed to IONOS server"
+        echo "📱 Check: https://steegmuellertransporte.de"
+        
+    - name: ❌ Notify on failure
+      if: failure()
+      run: |
+        echo "❌ Build or deployment failed!"
+        echo "🔍 Check the logs above for details"
