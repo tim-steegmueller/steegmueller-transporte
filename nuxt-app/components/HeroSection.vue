@@ -35,7 +35,7 @@
               <ShieldCheckIcon class="h-5 w-5 text-brand-600 dark:text-brand-400" />
               Persönliche Betreuung
             </dt>
-            <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-white">Direkte Abstimmung mit Susanne & Werner</dd>
+            <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-white">Direkte Abstimmung mit Werner Steegmüller</dd>
           </div>
           <div class="rounded-2xl border border-neutral-200 bg-white/70 p-4 shadow-sm backdrop-blur dark:border-midnight-700 dark:bg-midnight-800/80 dark:shadow-none">
             <dt class="flex items-center gap-2 text-sm font-medium text-neutral-500 dark:text-neutral-300">

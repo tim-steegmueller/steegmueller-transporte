@@ -35,6 +35,8 @@ pnpm i -D tailwindcss postcss autoprefixer @nuxt/image @nuxtjs/sitemap @nuxtjs/r
 pnpm dlx tailwindcss init -p
 ```
 
+**Wichtig:** Bei bestehenden Repositories immer zuerst `cd nuxt-app` vor `pnpm dev`!
+
 `nuxt.config.ts`
 
 ```ts
@@ -139,9 +141,17 @@ Keine kostenpflichtigen IONOS-Zertifikate nötig.
 
 ## 8) Build und Deployment
 
+**Entwicklungsserver starten:**
+```bash
+cd nuxt-app
+pnpm dev
+# Website läuft unter http://localhost:3000
+```
+
 Statischer Export:
 
 ```bash
+cd nuxt-app
 pnpm generate
 # Output: .output/public
 ```
@@ -149,6 +159,7 @@ pnpm generate
 Upload nach IONOS, Beispiel rsync:
 
 ```bash
+cd nuxt-app
 rsync -avz .output/public/ user@ionos:/path/www/
 ```
 
@@ -216,6 +227,7 @@ Google Business Profil: Name exakt, Kategorien „Kurierdienst“ und „Transpo
 * Prüfen:
 
 ```bash
+cd nuxt-app
 npx @lhci/cli autorun --collect.url=https://steegmuellertransporte.de || true
 ```
 
@@ -280,13 +292,13 @@ jobs:
         with: { version: 9 }
       - uses: actions/setup-node@v4
         with: { node-version: 20, cache: 'pnpm' }
-      - run: pnpm i
-      - run: pnpm generate
+      - run: cd nuxt-app && pnpm i
+      - run: cd nuxt-app && pnpm generate
       - name: rsync to ionos
         uses: burnett01/rsync-deployments@7.0.1
         with:
           switches: -avz --delete
-          path: .output/public/
+          path: nuxt-app/.output/public/
           remote_path: ${{ secrets.IONOS_PATH }}
           remote_host: ${{ secrets.IONOS_HOST }}
           remote_user: ${{ secrets.IONOS_USER }}

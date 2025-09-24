@@ -20,7 +20,7 @@
       <!-- Company Info & Map -->
       <div class="text-center mt-8">
         <p class="text-gray-600 dark:text-gray-300 mb-6">
-          Familienbetrieb aus Renningen mit <strong>Werner Steegmüller</strong> als Disponenten (40 Jahre Erfahrung) und <strong>Geschäftsführerin Susanne Steegmüller</strong>. Früher Magstadter Transporte, heute S. Steegmüller Transportdienstleistungen. Spezialisiert auf <NuxtLink to="/spedition-leonberg" class="text-brand-600 hover:text-brand-500 font-medium">Spedition Leonberg</NuxtLink>, <NuxtLink to="/transport-leonberg-renningen" class="text-brand-600 hover:text-brand-500 font-medium">Express-Route Leonberg-Renningen</NuxtLink> und spontane A-nach-B Fahrten national & EU-weit.
+          Familienbetrieb aus Renningen mit <strong>Werner Steegmüller</strong> als erfahrenem Transportprofi (40 Jahre Erfahrung). Früher Magstadter Transporte, heute S. Steegmüller Transportdienstleistungen. Spezialisiert auf <NuxtLink to="/spedition-leonberg" class="text-brand-600 hover:text-brand-500 font-medium">Spedition Leonberg</NuxtLink>, <NuxtLink to="/transport-leonberg-renningen" class="text-brand-600 hover:text-brand-500 font-medium">Express-Route Leonberg-Renningen</NuxtLink> und spontane A-nach-B Fahrten national & EU-weit.
         </p>
 
         <!-- Google Maps Embed -->

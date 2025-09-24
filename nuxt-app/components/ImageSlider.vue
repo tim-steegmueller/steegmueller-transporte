@@ -74,10 +74,10 @@ const emit = defineEmits(['next', 'previous', 'slide-change'])
 
 // Error handling for images
 const handleImageError = (index) => {
-  console.error(`Failed to load image at index ${index}:`, props.images[index]?.src)
+  // Image failed to load - could implement fallback here
 }
 
 const handleImageLoad = (index) => {
-  console.log(`Successfully loaded image at index ${index}:`, props.images[index]?.src)
+  // Image loaded successfully
 }
 </script>

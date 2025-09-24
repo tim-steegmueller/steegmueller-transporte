@@ -90,7 +90,7 @@
 
             <button
               @click="toggleMobileMenu"
-              class="inline-flex md:hidden mobile-toggle"
+              class="hidden max-md:inline-flex mobile-toggle"
               :aria-label="isMobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'"
               type="button"
             >
@@ -296,8 +296,10 @@ const breadcrumbItems = computed(() => {
 
 const navLinks = [
   { label: 'Leistungen', to: '/#leistungen' },
-  { label: 'Kontakt', to: '/#kontakt' },
+  { label: 'Kontakt', to: '/kontakt' },
   { label: 'Blog', to: '/blog' },
+  { label: 'FAQ', to: '/faq' },
+  { label: '🎮 Game', to: '/transport-game' },
   { label: 'Impressum', to: '/impressum' }
 ]
 
@@ -454,5 +456,16 @@ onMounted(() => {
 
 .floating-button.whatsapp {
   @apply bg-green-500 hover:bg-green-600 text-white;
+}
+
+/* Dark mode styles for theme toggle */
+.dark .theme-toggle {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .theme-toggle:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 </style>
