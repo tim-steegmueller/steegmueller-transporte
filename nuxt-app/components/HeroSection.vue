@@ -87,14 +87,14 @@
         </div>
       </div>
 
-       <div class="relative w-full max-w-xl self-stretch">
+       <div class="relative w-full max-w-xl self-stretch group">
          <!-- Image Slider -->
-         <ImageSlider 
+         <SimpleImageSlider 
            :images="slideImages"
            :current-slide="currentSlide"
            @next="nextSlide"
            @previous="previousSlide"
-           @slide-change="currentSlide = $event"
+           @slide-change="handleSlideChange"
          />
        </div>
     </div>
@@ -105,7 +105,7 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useIntersectionObserver } from '~/composables/useIntersectionObserver.js'
 import { CheckCircleIcon, EnvelopeIcon, BoltIcon, MapIcon, PhoneIcon, ShieldCheckIcon, TruckIcon } from '@heroicons/vue/24/outline'
-import ImageSlider from '~/components/ImageSlider.vue'
+import SimpleImageSlider from '~/components/SimpleImageSlider.vue'
 
 const heroSectionRef = ref(null)
 const { isVisible } = useIntersectionObserver(heroSectionRef, { threshold: 0.25 })
@@ -114,11 +114,31 @@ const heroIsVisible = isVisible
 // Slideshow State
 const currentSlide = ref(0)
 const slideImages = ref([
-  { src: '/images/transport/transporter-renningen-holz.webp', alt: 'Transporter mit Holzladung in Renningen' },
-  { src: '/images/transport/direktfahrt-stuttgart-material.webp', alt: 'Direktfahrt nach Stuttgart mit Material' },
-  { src: '/images/transport/transport-service-boeblingen.webp', alt: 'Transport Service in Böblingen' },
-  { src: '/images/transport/transporter-sindelfingen-tour.webp', alt: 'Transporter auf Sindelfingen Tour' },
-  { src: '/images/transport/transport-fahrzeug-beladen.webp', alt: 'Transport Fahrzeug beim Beladen' }
+  { 
+    src: '/images/transport/transporter-renningen-holz.webp', 
+    alt: 'Transporter mit Holzladung in Renningen',
+    title: 'Transport von Holz und Baumaterialien'
+  },
+  { 
+    src: '/images/transport/direktfahrt-stuttgart-material.webp', 
+    alt: 'Direktfahrt nach Stuttgart mit Material',
+    title: 'Express-Lieferungen nach Stuttgart'
+  },
+  { 
+    src: '/images/transport/transport-service-boeblingen.webp', 
+    alt: 'Transport Service in Böblingen',
+    title: 'Regelmäßige Touren nach Böblingen'
+  },
+  { 
+    src: '/images/transport/direktfahrt-leonberg-kurz.webp', 
+    alt: 'Direktfahrt nach Leonberg',
+    title: 'Zuverlässiger Service nach Leonberg'
+  },
+  { 
+    src: '/images/transport/transport-fahrzeug-beladen.webp', 
+    alt: 'Transport Fahrzeug beim Beladen',
+    title: 'Professionelle Ladungssicherung'
+  }
 ])
 
 // Slider Controls
@@ -130,7 +150,11 @@ const previousSlide = () => {
   currentSlide.value = currentSlide.value === 0 ? slideImages.value.length - 1 : currentSlide.value - 1
 }
 
-// Auto-slide functionality
+const handleSlideChange = (index) => {
+  currentSlide.value = index
+}
+
+// Simple auto-slide functionality
 let slideTimer = null
 
 const startSlider = () => {
@@ -148,7 +172,9 @@ const stopSlider = () => {
 }
 
 onMounted(() => {
-  if (heroIsVisible && heroIsVisible.value) startSlider()
+  if (heroIsVisible && heroIsVisible.value) {
+    startSlider()
+  }
 })
 
 onUnmounted(() => {
@@ -156,7 +182,10 @@ onUnmounted(() => {
 })
 
 watch(heroIsVisible, (vis) => {
-  if (vis) startSlider()
-  else stopSlider()
+  if (vis) {
+    startSlider()
+  } else {
+    stopSlider()
+  }
 })
 </script>

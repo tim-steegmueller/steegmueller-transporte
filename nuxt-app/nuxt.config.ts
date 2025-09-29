@@ -2,28 +2,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots'],
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
 
   // Performance optimizations
   routeRules: {
-    '/**': { prerender: true },
-    '/sitemap.xml': { headers: { 'Content-Type': 'application/xml' } },
-    '/robots.txt': { headers: { 'Content-Type': 'text/plain' } }
+    '/': { prerender: true, headers: { 'Cache-Control': 's-maxage=31536000' } },
+    '/kontakt': { prerender: true, headers: { 'Cache-Control': 's-maxage=86400' } },
+    '/impressum': { prerender: true, headers: { 'Cache-Control': 's-maxage=31536000' } },
+    '/datenschutz': { prerender: true, headers: { 'Cache-Control': 's-maxage=31536000' } },
+    '/blog/**': { prerender: true, headers: { 'Cache-Control': 's-maxage=86400' } },
+    '/transport-**': { prerender: true, headers: { 'Cache-Control': 's-maxage=86400' } },
+    '/sitemap.xml': { headers: { 'Content-Type': 'application/xml', 'Cache-Control': 's-maxage=86400' } },
+    '/sitemap-images.xml': { headers: { 'Content-Type': 'application/xml', 'Cache-Control': 's-maxage=86400' } },
+    '/robots.txt': { headers: { 'Content-Type': 'text/plain', 'Cache-Control': 's-maxage=86400' } }
   },
 
-  image: {
-    provider: 'ipx',
-    format: ['webp', 'avif'],
-    quality: 80,
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536
-    }
-  },
 
   site: {
     url: 'https://steegmuellertransporte.de',
@@ -34,6 +27,14 @@ export default defineNuxtConfig({
     hostname: 'https://steegmuellertransporte.de',
     gzip: true,
     exclude: ['/admin/**', '/test/**'],
+    // Fix für doppeltes HTML-Encoding in Bild-URLs
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date().toISOString()
+    },
+    // Bild-Sitemap deaktivieren um Encoding-Probleme zu vermeiden
+    excludeImages: true,
     routes: [
       '/transport-renningen-boeblingen',
       '/transport-renningen-sindelfingen',
@@ -54,7 +55,10 @@ export default defineNuxtConfig({
     UserAgent: '*',
     Allow: '/',
     Disallow: ['/admin/', '/test/'],
-    Sitemap: 'https://steegmuellertransporte.de/sitemap.xml',
+    Sitemap: [
+      'https://steegmuellertransporte.de/sitemap.xml',
+      'https://steegmuellertransporte.de/sitemap-images.xml'
+    ],
     Host: 'https://steegmuellertransporte.de'
   },
 
@@ -71,13 +75,6 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     minify: true,
-    storage: {
-      redis: {
-        driver: 'redis',
-        host: process.env.REDIS_HOST || 'localhost',
-        port: process.env.REDIS_PORT || 6379
-      }
-    },
     experimental: {
       wasm: true
     }
@@ -90,7 +87,27 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover',
       htmlAttrs: {
         lang: 'de'
-      }
+      },
+      link: [
+        { rel: 'canonical', href: 'https://steegmuellertransporte.de' },
+        { rel: 'alternate', hreflang: 'de', href: 'https://steegmuellertransporte.de' },
+        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
+      ],
+      meta: [
+        { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+        { name: 'googlebot', content: 'index, follow' },
+        { name: 'author', content: 'S. Steegmüller Transportdienstleistungen' },
+        { name: 'generator', content: 'Nuxt 4' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'theme-color', content: '#1f8a6e' },
+        { name: 'msapplication-TileColor', content: '#1f8a6e' },
+        { property: 'og:site_name', content: 'S. Steegmüller Transportdienstleistungen' },
+        { property: 'og:locale', content: 'de_DE' },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:site', content: '@steegmuellertransporte' },
+        { name: 'twitter:creator', content: '@steegmuellertransporte' }
+      ]
     }
   },
 

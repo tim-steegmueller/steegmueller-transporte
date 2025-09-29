@@ -144,7 +144,7 @@ onMounted(() => {
 
   // Touch Events für Debugging
   document.addEventListener('touchstart', () => {
-    console.log('Touch detected on iPhone test page')
+    // Touch detected on iPhone test page
   })
 })
 </script>

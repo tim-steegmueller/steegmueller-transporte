@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://steegmuellertransporte.de/</loc>
+    <image:image>
+      <image:loc>https://steegmuellertransporte.de/images/transport/transporter-renningen-holz.webp</image:loc>
+      <image:title>Transporter mit Holzladung in Renningen</image:title>
+      <image:caption>Professioneller Transportservice für Holz und Baumaterialien in Renningen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://steegmuellertransporte.de/images/transport/direktfahrt-stuttgart-material.webp</image:loc>
+      <image:title>Direktfahrt nach Stuttgart</image:title>
+      <image:caption>Zuverlässige Direktfahrten ohne Umladen von Renningen nach Stuttgart</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://steegmuellertransporte.de/images/transport/transport-service-boeblingen.webp</image:loc>
+      <image:title>Transportservice Böblingen</image:title>
+      <image:caption>Express-Kurier und Transportdienstleistungen nach Böblingen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://steegmuellertransporte.de/images/transport/transporter-sindelfingen-tour.webp</image:loc>
+      <image:title>Transport nach Sindelfingen</image:title>
+      <image:caption>Regelmäßige Touren und Direktfahrten nach Sindelfingen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://steegmuellertransporte.de/images/transport/transport-fahrzeug-beladen.webp</image:loc>
+      <image:title>Beladenes Transportfahrzeug</image:title>
+      <image:caption>Sichere Ladungssicherung und professioneller Transportservice</image:caption>
+    </image:image>
+  </url>
+</urlset>
+

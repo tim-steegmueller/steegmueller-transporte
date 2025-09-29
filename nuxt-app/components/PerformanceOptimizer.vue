@@ -44,7 +44,7 @@ import { ref, computed } from 'vue'
 import { ArrowPathIcon, BoltIcon, CheckCircleIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline'
 
 const isOpen = ref(true)
-const statusText = computed(() => process.dev ? 'Entwicklungsmodus aktiv' : 'Produktionsbuild')
+const statusText = computed(() => import.meta.dev ? 'Entwicklungsmodus aktiv' : 'Produktionsbuild')
 </script>
 
 <style scoped>
