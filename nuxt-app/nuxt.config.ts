@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
 
+  // Runtime Config für EmailJS
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+      emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+      emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+    }
+  },
+
   // Performance optimizations
   routeRules: {
     '/': { prerender: true, headers: { 'Cache-Control': 's-maxage=31536000' } },

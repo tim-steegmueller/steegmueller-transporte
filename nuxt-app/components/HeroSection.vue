@@ -87,14 +87,16 @@
         </div>
       </div>
 
-       <div class="relative w-full max-w-xl self-stretch group">
+       <div class="relative w-full max-w-xl self-stretch">
          <!-- Image Slider -->
-         <SimpleImageSlider 
+         <SimpleImageSlider
            :images="slideImages"
            :current-slide="currentSlide"
            @next="nextSlide"
            @previous="previousSlide"
            @slide-change="handleSlideChange"
+           @pause-auto-slide="stopSlider"
+           @resume-auto-slide="startSlider"
          />
        </div>
     </div>
