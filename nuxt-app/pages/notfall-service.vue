@@ -146,28 +146,37 @@
 
     <!-- Schnell-Kontakt -->
     <section class="py-16 bg-red-600 text-white">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Notfall? Werner ist da!</h2>
-        <p class="text-xl mb-8 opacity-90">
-          Egal ob Wochenende oder Feiertag – bei echten Notfällen erreichen Sie Werner
-        </p>
-        <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          <div class="bg-white/10 p-6 rounded-xl">
-            <PhoneIcon class="h-8 w-8 mx-auto mb-3" />
-            <h3 class="font-semibold mb-2">Büro-Hotline</h3>
-            <a href="tel:+4971599396183" class="text-xl font-bold hover:underline">
-              07159 / 939 61 83
-            </a>
-            <p class="text-sm opacity-80 mt-1">Mo-Fr 8-18 Uhr</p>
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-6">Notfall? Werner ist da!</h2>
+          <p class="text-xl mb-8 opacity-90">
+            Egal ob Wochenende oder Feiertag – bei echten Notfällen erreichen Sie Werner
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Phone Cards -->
+          <div class="space-y-4">
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+              <PhoneIcon class="h-8 w-8 mx-auto mb-3" />
+              <h3 class="font-semibold mb-2">Büro-Hotline</h3>
+              <a href="tel:+4971599396183" class="text-xl font-bold hover:underline block">
+                07159 / 939 61 83
+              </a>
+              <p class="text-sm opacity-80 mt-1">Mo-Fr 8-18 Uhr</p>
+            </div>
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+              <DevicePhoneMobileIcon class="h-8 w-8 mx-auto mb-3" />
+              <h3 class="font-semibold mb-2">Werner Mobil</h3>
+              <a href="tel:+491727552023" class="text-xl font-bold hover:underline block">
+                0172 755 20 23
+              </a>
+              <p class="text-sm opacity-80 mt-1">Notfall auch außerhalb</p>
+            </div>
           </div>
-          <div class="bg-white/10 p-6 rounded-xl">
-            <DevicePhoneMobileIcon class="h-8 w-8 mx-auto mb-3" />
-            <h3 class="font-semibold mb-2">Werner Mobil</h3>
-            <a href="tel:+491727552023" class="text-xl font-bold hover:underline">
-              0172 755 20 23
-            </a>
-            <p class="text-sm opacity-80 mt-1">Notfall auch außerhalb</p>
-          </div>
+
+          <!-- Quick Contact Form -->
+          <QuickContactForm />
         </div>
       </div>
     </section>
@@ -186,6 +195,7 @@ import {
   LightBulbIcon,
   UserIcon
 } from '@heroicons/vue/24/outline'
+import QuickContactForm from '~/components/QuickContactForm.vue'
 
 useHead({
   title: 'Notfall-Transport Werner Disponent | Spontane Transporte Renningen-Leonberg',

@@ -412,19 +412,19 @@ onMounted(() => {
 }
 
 .mobile-bar {
-  @apply absolute left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-gray-700 dark:bg-gray-200 transition;
+  @apply absolute left-1/2 h-0.5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-700 dark:bg-gray-200 transition;
 }
 
 .mobile-bar:nth-child(1) {
-  top: 8px;
+  top: 30%;
 }
 
 .mobile-bar:nth-child(2) {
-  top: 16px;
+  top: 50%;
 }
 
 .mobile-bar:nth-child(3) {
-  top: 24px;
+  top: 70%;
 }
 
 .mobile-nav {

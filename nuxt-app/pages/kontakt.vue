@@ -270,6 +270,10 @@ useHead({
   ]
 })
 
+import emailjs from '@emailjs/browser'
+
+const config = useRuntimeConfig()
+
 // Form state
 const form = ref({
   name: '',
@@ -290,10 +294,25 @@ const submitForm = async () => {
   submitMessage.value = ''
 
   try {
-    // Simulate form submission - replace with actual API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    const templateParams = {
+      from_name: form.value.name,
+      from_email: form.value.email,
+      from_phone: form.value.phone || 'Nicht angegeben',
+      from_service: form.value.service || 'Nicht angegeben',
+      message: form.value.message,
+      reply_to: form.value.email,
+      from_start: '',
+      from_ziel: '',
+      from_termin: ''
+    }
 
-    // For now, just show success message
+    await emailjs.send(
+      config.public.emailjsServiceId,
+      config.public.emailjsTemplateId,
+      templateParams,
+      config.public.emailjsPublicKey
+    )
+
     submitMessage.value = 'Vielen Dank für Ihre Anfrage! Werner Steegmüller wird sich schnellstmöglich bei Ihnen melden.'
     submitSuccess.value = true
 
@@ -306,9 +325,19 @@ const submitForm = async () => {
       message: '',
       privacy: false
     }
+
+    // Auto-hide success after 5s
+    setTimeout(() => {
+      submitMessage.value = ''
+    }, 5000)
   } catch (error) {
-    submitMessage.value = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.'
+    console.error('EmailJS Error:', error)
+    submitMessage.value = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt unter 0172 755 20 23.'
     submitSuccess.value = false
+
+    setTimeout(() => {
+      submitMessage.value = ''
+    }, 7000)
   } finally {
     isSubmitting.value = false
   }

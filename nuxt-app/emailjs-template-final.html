@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neue Transportanfrage</title>
+</head>
+<body style="margin: 0; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif; background-color: #f5f5f5;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto;">
+        <tr>
+            <td>
+                <!-- Header -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="background: linear-gradient(135deg, #1f8a6e 0%, #16694f 100%); border-radius: 12px 12px 0 0; padding: 32px; margin-bottom: 24px;">
+                    <tr>
+                        <td>
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600;">
+                                🚚 Neue Transportanfrage
+                            </h1>
+                            <p style="margin: 12px 0 0 0; color: #e0f2f1; font-size: 14px; opacity: 0.9;">
+                                Eingegangen über steegmuellertransporte.de
+                            </p>
+                        </td>
+                        <td align="right">
+                            <span style="display: inline-block; background-color: #ff6b6b; color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase;">
+                                NEU
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Main Container -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; padding: 32px;">
+                    <tr>
+                        <td>
+                            <!-- Contact Info Section -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-left: 4px solid #1f8a6e; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 8px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            👤 KUNDE
+                                        </p>
+                                        <p style="margin: 0 0 20px 0; color: #333333; font-size: 18px; font-weight: 600;">
+                                            {{from_name}}
+                                        </p>
+
+                                        <p style="margin: 0 0 8px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            📞 TELEFON
+                                        </p>
+                                        <p style="margin: 0; font-size: 18px;">
+                                            <a href="tel:{{from_phone}}" style="color: #1f8a6e; text-decoration: none; font-weight: 600;">
+                                                {{from_phone}}
+                                            </a>
+                                        </p>
+
+                                        <!-- E-Mail (falls vorhanden) -->
+                                        {{#if from_email}}
+                                        <p style="margin: 20px 0 8px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            ✉️ E-MAIL
+                                        </p>
+                                        <p style="margin: 0; font-size: 16px;">
+                                            <a href="mailto:{{from_email}}" style="color: #1f8a6e; text-decoration: none;">
+                                                {{from_email}}
+                                            </a>
+                                        </p>
+                                        {{/if}}
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Route Section -->
+                            {{#if from_start}}
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-left: 4px solid #1f8a6e; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 8px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            📍 STARTORT
+                                        </p>
+                                        <p style="margin: 0 0 20px 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                            {{from_start}}
+                                        </p>
+
+                                        {{#if from_ziel}}
+                                        <p style="margin: 0 0 8px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            🎯 ZIELORT
+                                        </p>
+                                        <p style="margin: 0 0 20px 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                            {{from_ziel}}
+                                        </p>
+                                        {{/if}}
+
+                                        {{#if from_termin}}
+                                        <p style="margin: 0 0 8px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            📅 TERMINWUNSCH
+                                        </p>
+                                        <p style="margin: 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                            {{from_termin}}
+                                        </p>
+                                        {{/if}}
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/if}}
+
+                            <!-- Service Type (falls vorhanden) -->
+                            {{#if from_service}}
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 8px 0; color: #1976d2; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            🔧 SERVICE
+                                        </p>
+                                        <p style="margin: 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                            {{from_service}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/if}}
+
+                            <!-- Message Section -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-left: 4px solid #1f8a6e; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 12px 0; color: #1f8a6e; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            💬 NACHRICHT
+                                        </p>
+                                        <div style="background-color: #ffffff; border: 2px solid #e9ecef; border-radius: 8px; padding: 16px; white-space: pre-wrap; color: #333333; font-size: 15px; line-height: 1.6;">{{message}}</div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- CTA Button -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin: 32px 0;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="tel:{{from_phone}}" style="display: inline-block; background-color: #1f8a6e; color: #ffffff; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+                                            📞 Kunde zurückrufen
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Footer -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="border-top: 2px solid #e9ecef; padding-top: 24px; margin-top: 32px;">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                            S. Steegmüller Transportdienstleistungen
+                                        </p>
+                                        <p style="margin: 8px 0; color: #6c757d; font-size: 14px;">
+                                            Express- & Direktfahrten seit 1985
+                                        </p>
+                                        <p style="margin: 8px 0; color: #6c757d; font-size: 14px;">
+                                            Region Stuttgart · Renningen · Böblingen · Sindelfingen · Leonberg
+                                        </p>
+                                        <p style="margin: 20px 0 0 0; color: #adb5bd; font-size: 12px;">
+                                            Diese Anfrage wurde über das Kontaktformular auf steegmuellertransporte.de eingereicht.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
