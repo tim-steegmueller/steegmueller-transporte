@@ -51,12 +51,15 @@ jobs:
           NUXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
           NUXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.NUXT_PUBLIC_EMAILJS_SERVICE_ID }}
           NUXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${{ secrets.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID }}
-        run: npm run generate
+        run: |
+          cd nuxt-app
+          npm run generate
 
       - name: "🧭 Detect output dir"
         id: out
         run: |
           set -e
+          cd nuxt-app
           if [ -d ".output/public" ]; then
             OUT=".output/public"
           elif [ -d "dist" ]; then
@@ -71,7 +74,7 @@ jobs:
             exit 1
           fi
 
-          echo "OUTPUT_DIR=$OUT" >> $GITHUB_OUTPUT
+          echo "OUTPUT_DIR=nuxt-app/$OUT" >> $GITHUB_OUTPUT
           echo "✅ Output gefunden: $OUT"
 
       - name: "📁 Prepare deployment files"
