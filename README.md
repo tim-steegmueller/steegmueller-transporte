@@ -10,6 +10,16 @@
 
 ---
 
+## 📚 Quick Links
+
+- **[🚀 Quick Start & Setup](SETUP.md)** - Get started in 5 minutes
+- **[🤝 Contributing Guidelines](CONTRIBUTING.md)** - How to contribute
+- **[✅ Code Quality Standards](CODE_QUALITY.md)** - ESLint, Prettier, TypeScript
+- **[🔧 DevOps & CI/CD](DEVOPS.md)** - Deployment and workflows
+- **[☁️ Cloud Infrastructure](CLOUD.md)** - IONOS, Cloudflare, DNS
+
+---
+
 ## 🎯 **Projektübersicht**
 
 Diese Website ist die digitale Visitenkarte für **S. Steegmüller Transportdienstleistungen** aus Renningen. Sie bietet eine moderne, schnelle und SEO-optimierte Präsentation der Transportdienstleistungen mit Fokus auf lokale Sichtbarkeit in der Region Böblingen, Sindelfingen, Leonberg und Stuttgart.
@@ -20,10 +30,11 @@ Diese Website ist die digitale Visitenkarte für **S. Steegmüller Transportdien
 - 📱 **Responsive Design** - Optimiert für alle Geräte
 - 🎨 **Modern UI** - Tailwind CSS mit Custom Brand Colors
 - 🔍 **SEO Optimiert** - Structured Data, Sitemap, Meta Tags
-- 📧 **Kontaktformular** - Formspree Integration
+- 📧 **Kontaktformular** - EmailJS Integration
 - 🍪 **DSGVO Konform** - Cookie Banner, Datenschutz
 - 🖼️ **Performance** - WebP/AVIF Bilder, Lazy Loading
 - ♿ **Barrierefrei** - WCAG 2.1 AA Standards
+- ✅ **Code Quality** - ESLint, Prettier, TypeScript, Husky
 
 ---
 
