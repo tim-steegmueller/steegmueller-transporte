@@ -1,6 +1,9 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 
-export function useIntersectionObserver(elementRef, options = { root: null, rootMargin: '0px', threshold: 0.1 }) {
+export function useIntersectionObserver(
+  elementRef,
+  options = { root: null, rootMargin: '0px', threshold: 0.1 }
+) {
   const isVisible = ref(false)
 
   let observer = null

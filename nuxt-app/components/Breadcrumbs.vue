@@ -3,32 +3,28 @@
     <ol class="flex items-center space-x-2">
       <li v-for="(item, index) in breadcrumbs" :key="index" class="flex items-center">
         <!-- Separator -->
-        <ChevronRightIcon 
-          v-if="index > 0" 
-          class="h-4 w-4 text-gray-400 mx-2" 
-          aria-hidden="true"
-        />
-        
+        <ChevronRightIcon v-if="index > 0" class="h-4 w-4 text-gray-400 mx-2" aria-hidden="true" />
+
         <!-- Breadcrumb Item -->
         <component
           :is="item.href ? 'NuxtLink' : 'span'"
           :to="item.href"
           :class="[
             'flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200',
-            item.href 
-              ? 'text-gray-600 hover:text-brand-600 hover:bg-brand-50 dark:text-gray-300 dark:hover:text-brand-400 dark:hover:bg-brand-900/20' 
+            item.href
+              ? 'text-gray-600 hover:text-brand-600 hover:bg-brand-50 dark:text-gray-300 dark:hover:text-brand-400 dark:hover:bg-brand-900/20'
               : 'text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 font-medium'
           ]"
           :aria-current="!item.href ? 'page' : undefined"
         >
           <!-- Icon -->
-          <component 
-            v-if="item.icon" 
-            :is="item.icon" 
+          <component
+            :is="item.icon"
+            v-if="item.icon"
             class="h-4 w-4"
             :class="item.href ? 'text-gray-400' : 'text-brand-600 dark:text-brand-400'"
           />
-          
+
           <!-- Text -->
           <span>{{ item.label }}</span>
         </component>
@@ -39,8 +35,8 @@
 
 <script setup>
 import { computed } from 'vue'
-import { 
-  HomeIcon, 
+import {
+  HomeIcon,
   ChevronRightIcon,
   TruckIcon,
   MapPinIcon,
@@ -74,7 +70,7 @@ const iconMap = {
 // Computed breadcrumbs with home
 const breadcrumbs = computed(() => {
   const items = [...props.items]
-  
+
   if (props.showHome && items.length > 0) {
     items.unshift({
       label: 'Start',
@@ -82,7 +78,7 @@ const breadcrumbs = computed(() => {
       icon: 'home'
     })
   }
-  
+
   return items.map(item => ({
     ...item,
     icon: item.icon ? iconMap[item.icon] : null
@@ -114,11 +110,11 @@ nav a:hover {
 }
 
 /* Active state */
-nav span[aria-current="page"] {
+nav span[aria-current='page'] {
   position: relative;
 }
 
-nav span[aria-current="page"]::after {
+nav span[aria-current='page']::after {
   content: '';
   position: absolute;
   bottom: -2px;

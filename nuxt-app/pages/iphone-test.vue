@@ -19,26 +19,33 @@
         <h3 class="font-bold mb-4">Version 1: Standard (wie aktuell)</h3>
         <form class="space-y-4 mobile-form">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input type="text" placeholder="Name *" class="w-full p-3 border rounded">
-            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded">
+            <input type="text" placeholder="Name *" class="w-full p-3 border rounded" />
+            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded" />
           </div>
-          <input type="text" placeholder="Startort" class="w-full p-3 border rounded">
-          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded">
-          <button type="button" class="w-full bg-green-600 text-white p-3 rounded">Test Button</button>
+          <input type="text" placeholder="Startort" class="w-full p-3 border rounded" />
+          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded" />
+          <button type="button" class="w-full bg-green-600 text-white p-3 rounded">
+            Test Button
+          </button>
         </form>
       </div>
 
       <!-- Version 2: 100vw -->
-      <div class="bg-white p-4 rounded border-2 border-red-500" style="width: 100vw; margin-left: calc(-50vw + 50%);">
+      <div
+        class="bg-white p-4 rounded border-2 border-red-500"
+        style="width: 100vw; margin-left: calc(-50vw + 50%)"
+      >
         <h3 class="font-bold mb-4">Version 2: 100vw Container</h3>
-        <form class="space-y-4" style="padding: 0 1rem;">
+        <form class="space-y-4" style="padding: 0 1rem">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input type="text" placeholder="Name *" class="w-full p-3 border rounded">
-            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded">
+            <input type="text" placeholder="Name *" class="w-full p-3 border rounded" />
+            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded" />
           </div>
-          <input type="text" placeholder="Startort" class="w-full p-3 border rounded">
-          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded">
-          <button type="button" class="w-full bg-red-600 text-white p-3 rounded">Test Button</button>
+          <input type="text" placeholder="Startort" class="w-full p-3 border rounded" />
+          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded" />
+          <button type="button" class="w-full bg-red-600 text-white p-3 rounded">
+            Test Button
+          </button>
         </form>
       </div>
 
@@ -47,26 +54,50 @@
         <h3 class="font-bold mb-4">Version 3: Flexbox Fix</h3>
         <form class="space-y-4">
           <div class="flex flex-col sm:flex-row gap-4">
-            <input type="text" placeholder="Name *" class="flex-1 p-3 border rounded min-w-0">
-            <input type="tel" placeholder="Telefon *" class="flex-1 p-3 border rounded min-w-0">
+            <input type="text" placeholder="Name *" class="flex-1 p-3 border rounded min-w-0" />
+            <input type="tel" placeholder="Telefon *" class="flex-1 p-3 border rounded min-w-0" />
           </div>
-          <input type="text" placeholder="Startort" class="w-full p-3 border rounded">
-          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded">
-          <button type="button" class="w-full bg-green-600 text-white p-3 rounded">Test Button</button>
+          <input type="text" placeholder="Startort" class="w-full p-3 border rounded" />
+          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded" />
+          <button type="button" class="w-full bg-green-600 text-white p-3 rounded">
+            Test Button
+          </button>
         </form>
       </div>
 
       <!-- Version 4: Pure CSS Grid -->
       <div class="bg-white p-4 rounded border-2 border-purple-500">
         <h3 class="font-bold mb-4">Version 4: CSS Grid Native</h3>
-        <form class="space-y-4" style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <input type="text" placeholder="Name *" class="p-3 border rounded" style="width: 100%; box-sizing: border-box;">
-            <input type="tel" placeholder="Telefon *" class="p-3 border rounded" style="width: 100%; box-sizing: border-box;">
+        <form class="space-y-4" style="display: grid; grid-template-columns: 1fr; gap: 1rem">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem">
+            <input
+              type="text"
+              placeholder="Name *"
+              class="p-3 border rounded"
+              style="width: 100%; box-sizing: border-box"
+            />
+            <input
+              type="tel"
+              placeholder="Telefon *"
+              class="p-3 border rounded"
+              style="width: 100%; box-sizing: border-box"
+            />
           </div>
-          <input type="text" placeholder="Startort" class="p-3 border rounded" style="width: 100%; box-sizing: border-box;">
-          <input type="text" placeholder="Zielort" class="p-3 border rounded" style="width: 100%; box-sizing: border-box;">
-          <button type="button" class="w-full bg-purple-600 text-white p-3 rounded">Test Button</button>
+          <input
+            type="text"
+            placeholder="Startort"
+            class="p-3 border rounded"
+            style="width: 100%; box-sizing: border-box"
+          />
+          <input
+            type="text"
+            placeholder="Zielort"
+            class="p-3 border rounded"
+            style="width: 100%; box-sizing: border-box"
+          />
+          <button type="button" class="w-full bg-purple-600 text-white p-3 rounded">
+            Test Button
+          </button>
         </form>
       </div>
 
@@ -75,16 +106,18 @@
         <h3 class="font-bold mb-4">Version 5: Kein Grid auf Mobile</h3>
         <form class="space-y-4">
           <div class="hidden sm:grid sm:grid-cols-2 sm:gap-4 space-y-4 sm:space-y-0">
-            <input type="text" placeholder="Name *" class="w-full p-3 border rounded">
-            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded">
+            <input type="text" placeholder="Name *" class="w-full p-3 border rounded" />
+            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded" />
           </div>
           <div class="sm:hidden space-y-4">
-            <input type="text" placeholder="Name *" class="w-full p-3 border rounded">
-            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded">
+            <input type="text" placeholder="Name *" class="w-full p-3 border rounded" />
+            <input type="tel" placeholder="Telefon *" class="w-full p-3 border rounded" />
           </div>
-          <input type="text" placeholder="Startort" class="w-full p-3 border rounded">
-          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded">
-          <button type="button" class="w-full bg-orange-600 text-white p-3 rounded">Test Button</button>
+          <input type="text" placeholder="Startort" class="w-full p-3 border rounded" />
+          <input type="text" placeholder="Zielort" class="w-full p-3 border rounded" />
+          <button type="button" class="w-full bg-orange-600 text-white p-3 rounded">
+            Test Button
+          </button>
         </form>
       </div>
     </div>
@@ -92,7 +125,7 @@
     <!-- Diagnose Output -->
     <div class="mt-8 bg-gray-100 p-4 rounded">
       <h3 class="font-bold mb-2">📊 Live Diagnose:</h3>
-      <div id="diagnose-output" class="text-sm font-mono bg-white p-2 rounded"></div>
+      <div id="diagnose-output" class="text-sm font-mono bg-white p-2 rounded" />
     </div>
   </div>
 </template>
@@ -101,7 +134,10 @@
 useHead({
   title: 'iPhone Kontaktformular Test - Diagnostik für Werner',
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' }
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+    }
   ]
 })
 

@@ -1,0 +1,64 @@
+name: "🧪 PR Validation"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nuxt-app/**'
+      - '.github/workflows/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: "📥 Checkout code"
+        uses: actions/checkout@v4
+
+      - name: "📦 Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "nuxt-app/package-lock.json"
+
+      - name: "📦 Install dependencies"
+        run: |
+          cd nuxt-app
+          npm ci
+
+      - name: "🔍 Run ESLint"
+        run: |
+          cd nuxt-app
+          npm run lint
+
+      - name: "💅 Check Prettier formatting"
+        run: |
+          cd nuxt-app
+          npm run format:check
+
+      - name: "🔎 TypeScript type checking"
+        run: |
+          cd nuxt-app
+          npm run typecheck
+
+      - name: "🏗️ Test build"
+        env:
+          NUXT_PUBLIC_EMAILJS_PUBLIC_KEY: test_key
+          NUXT_PUBLIC_EMAILJS_SERVICE_ID: test_service
+          NUXT_PUBLIC_EMAILJS_TEMPLATE_ID: test_template
+        run: |
+          cd nuxt-app
+          npm run generate
+
+      - name: "✅ Validation Summary"
+        if: success()
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "✅ All validation checks passed!"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "✓ Linting passed"
+          echo "✓ Formatting passed"
+          echo "✓ Type checking passed"
+          echo "✓ Build successful"

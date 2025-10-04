@@ -1,27 +1,36 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 py-16">
+    <section
+      class="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 py-16"
+    >
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <div class="inline-flex items-center bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <div
+          class="inline-flex items-center bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6"
+        >
           <ArrowPathIcon class="h-4 w-4 mr-2" />
           Express Route
         </div>
         <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6">
-          Transport<br>
+          Transport<br />
           <span class="text-orange-600 dark:text-orange-400">Leonberg ↔ Renningen</span>
         </h1>
         <p class="text-xl text-gray-700 dark:text-gray-200 mb-8">
-          Die schnellste Verbindung zwischen Leonberg und Renningen. Mit Werner als Disponenten für spontane Transporte und kurze Reaktionszeiten auf der Express-Strecke.
+          Die schnellste Verbindung zwischen Leonberg und Renningen. Mit Werner als Disponenten für
+          spontane Transporte und kurze Reaktionszeiten auf der Express-Strecke.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+4971599396183"
-             class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+          <a
+            href="tel:+4971599396183"
+            class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+          >
             <PhoneIcon class="h-5 w-5 mr-2" />
             Express: 07159 / 939 61 83
           </a>
-          <a href="#streckeninfo"
-             class="bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-lg font-semibold border border-gray-300 dark:border-gray-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+          <a
+            href="#streckeninfo"
+            class="bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-lg font-semibold border border-gray-300 dark:border-gray-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center"
+          >
             <MapIcon class="h-5 w-5 mr-2" />
             Streckeninfo
           </a>
@@ -37,7 +46,9 @@
         </h2>
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div class="bg-gradient-to-br from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 p-8 rounded-2xl">
+            <div
+              class="bg-gradient-to-br from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 p-8 rounded-2xl"
+            >
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Strecken-Details
               </h3>
@@ -67,7 +78,9 @@
                   <CalendarIcon class="h-6 w-6 text-purple-600 mr-3" />
                   <div>
                     <p class="font-semibold text-gray-900 dark:text-white">Verfügbarkeit</p>
-                    <p class="text-gray-700 dark:text-gray-300">Mo-Fr 8-18 Uhr • Notfall auch außerhalb</p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      Mo-Fr 8-18 Uhr • Notfall auch außerhalb
+                    </p>
                   </div>
                 </div>
               </div>
@@ -111,13 +124,16 @@
           Transport-Services auf der Strecke
         </h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          >
             <div class="flex items-center mb-4">
               <BoltIcon class="h-8 w-8 text-yellow-600 mr-3" />
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Express Same-Day</h3>
             </div>
             <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Heute abholen in Leonberg, heute liefern in Renningen (oder umgekehrt). Perfekt für eilige Sendungen.
+              Heute abholen in Leonberg, heute liefern in Renningen (oder umgekehrt). Perfekt für
+              eilige Sendungen.
             </p>
             <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
               <li>• Abholung binnen 2 Stunden</li>
@@ -126,13 +142,16 @@
             </ul>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          >
             <div class="flex items-center mb-4">
               <DocumentIcon class="h-8 w-8 text-blue-600 mr-3" />
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Kurier-Express</h3>
             </div>
             <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Wichtige Dokumente oder kleine Pakete zwischen Leonberg und Renningen in unter einer Stunde.
+              Wichtige Dokumente oder kleine Pakete zwischen Leonberg und Renningen in unter einer
+              Stunde.
             </p>
             <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
               <li>• Dokumente sicher verpackt</li>
@@ -141,13 +160,16 @@
             </ul>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          >
             <div class="flex items-center mb-4">
               <HomeIcon class="h-8 w-8 text-green-600 mr-3" />
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Möbel-Transport</h3>
             </div>
             <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Einzelstücke oder komplette Wohnungseinrichtungen zwischen Leonberg und Renningen transportieren.
+              Einzelstücke oder komplette Wohnungseinrichtungen zwischen Leonberg und Renningen
+              transportieren.
             </p>
             <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
               <li>• Professionelle Verpackung</li>
@@ -156,13 +178,16 @@
             </ul>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          >
             <div class="flex items-center mb-4">
               <BuildingOfficeIcon class="h-8 w-8 text-indigo-600 mr-3" />
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Firmen-Shuttle</h3>
             </div>
             <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Regelmäßige Transporte für Unternehmen zwischen Leonberg und Renningen. Feste Termine, zuverlässig.
+              Regelmäßige Transporte für Unternehmen zwischen Leonberg und Renningen. Feste Termine,
+              zuverlässig.
             </p>
             <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
               <li>• Wöchentliche Routen</li>
@@ -171,13 +196,16 @@
             </ul>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          >
             <div class="flex items-center mb-4">
               <ExclamationTriangleIcon class="h-8 w-8 text-red-600 mr-3" />
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Notfall-Service</h3>
             </div>
             <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Wenn's brennt und spontan was zwischen Leonberg und Renningen bewegt werden muss – Werner organisiert's.
+              Wenn's brennt und spontan was zwischen Leonberg und Renningen bewegt werden muss –
+              Werner organisiert's.
             </p>
             <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
               <li>• Sofortige Verfügbarkeit</li>
@@ -186,7 +214,9 @@
             </ul>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          >
             <div class="flex items-center mb-4">
               <CogIcon class="h-8 w-8 text-purple-600 mr-3" />
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Sonder-Transporte</h3>
@@ -210,7 +240,9 @@
         <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Faire Preise für kurze Strecke
         </h2>
-        <div class="bg-gradient-to-r from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 p-8 rounded-2xl">
+        <div
+          class="bg-gradient-to-r from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 p-8 rounded-2xl"
+        >
           <div class="grid md:grid-cols-2 gap-8">
             <div>
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -240,17 +272,21 @@
                 Kostenvoranschlag anfordern
               </h3>
               <p class="text-gray-700 dark:text-gray-300 mb-4">
-                Rufen Sie Werner an und beschreiben Sie Ihren Transport.
-                Sie erhalten sofort einen fairen Preis für die Strecke Leonberg-Renningen.
+                Rufen Sie Werner an und beschreiben Sie Ihren Transport. Sie erhalten sofort einen
+                fairen Preis für die Strecke Leonberg-Renningen.
               </p>
               <div class="flex gap-4">
-                <a href="tel:+4971599396183"
-                   class="bg-orange-600 hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
+                <a
+                  href="tel:+4971599396183"
+                  class="bg-orange-600 hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
+                >
                   <PhoneIcon class="h-4 w-4 mr-2" />
                   Preis erfragen
                 </a>
-                <a href="tel:+491727552023"
-                   class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
+                <a
+                  href="tel:+491727552023"
+                  class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
+                >
                   <DevicePhoneMobileIcon class="h-4 w-4 mr-2" />
                   Werner Mobil
                 </a>
@@ -313,70 +349,88 @@ import {
 useHead({
   title: '🚛 Transport Leonberg Renningen ⚡ Express Route Werner Disponent | Steegmüller',
   meta: [
-    { name: 'description', content: '🚛 Express Transport Leonberg ↔ Renningen ⚡ 8km in 15min ✓ Werner Disponent ✓ Same-Day Delivery ✓ Notfall-Service ✓ 30+ Jahre Strecken-Expertise ☎ 07159 / 939 61 83' },
-    { name: 'keywords', content: 'Transport Leonberg Renningen, Express Leonberg Renningen, Kurier Leonberg Renningen, Transport Renningen Leonberg, Same Day Delivery Leonberg Renningen, Direktfahrt Leonberg Renningen, Werner Disponent, Notfall Transport Leonberg Renningen, Spedition Leonberg Renningen, Umzug Leonberg Renningen, Möbeltransport Leonberg Renningen, Firmentransport Leonberg Renningen, Express Route, kurze Strecke, 8km Transport, schneller Transport, lokaler Transport, regionale Spedition' },
+    {
+      name: 'description',
+      content:
+        '🚛 Express Transport Leonberg ↔ Renningen ⚡ 8km in 15min ✓ Werner Disponent ✓ Same-Day Delivery ✓ Notfall-Service ✓ 30+ Jahre Strecken-Expertise ☎ 07159 / 939 61 83'
+    },
+    {
+      name: 'keywords',
+      content:
+        'Transport Leonberg Renningen, Express Leonberg Renningen, Kurier Leonberg Renningen, Transport Renningen Leonberg, Same Day Delivery Leonberg Renningen, Direktfahrt Leonberg Renningen, Werner Disponent, Notfall Transport Leonberg Renningen, Spedition Leonberg Renningen, Umzug Leonberg Renningen, Möbeltransport Leonberg Renningen, Firmentransport Leonberg Renningen, Express Route, kurze Strecke, 8km Transport, schneller Transport, lokaler Transport, regionale Spedition'
+    },
     { name: 'robots', content: 'index, follow' },
     { name: 'geo.region', content: 'DE-BW' },
     { name: 'geo.placename', content: 'Leonberg,Renningen' },
-    { property: 'og:title', content: 'Express Transport Leonberg ↔ Renningen • Werner Disponent • 8km in 15min' },
-    { property: 'og:description', content: 'Die schnellste Verbindung zwischen Leonberg und Renningen. Mit Werner als Disponenten für spontane Transporte und kurze Reaktionszeiten.' }
+    {
+      property: 'og:title',
+      content: 'Express Transport Leonberg ↔ Renningen • Werner Disponent • 8km in 15min'
+    },
+    {
+      property: 'og:description',
+      content:
+        'Die schnellste Verbindung zwischen Leonberg und Renningen. Mit Werner als Disponenten für spontane Transporte und kurze Reaktionszeiten.'
+    }
   ],
   script: [
     {
       type: 'application/ld+json',
       children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Transport Leonberg Renningen Express Route",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "S. Steegmüller Transportdienstleistungen",
-          "telephone": "+4971599396183",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Kornblumenweg 13",
-            "addressLocality": "Renningen",
-            "postalCode": "71272",
-            "addressCountry": "DE"
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Transport Leonberg Renningen Express Route',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'S. Steegmüller Transportdienstleistungen',
+          telephone: '+4971599396183',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Kornblumenweg 13',
+            addressLocality: 'Renningen',
+            postalCode: '71272',
+            addressCountry: 'DE'
           }
         },
-        "description": "Express Transport zwischen Leonberg und Renningen. 8km Strecke in 15 Minuten mit Werner als erfahrenem Disponenten.",
-        "areaServed": [
+        description:
+          'Express Transport zwischen Leonberg und Renningen. 8km Strecke in 15 Minuten mit Werner als erfahrenem Disponenten.',
+        areaServed: [
           {
-            "@type": "City",
-            "name": "Leonberg"
+            '@type': 'City',
+            name: 'Leonberg'
           },
           {
-            "@type": "City",
-            "name": "Renningen"
+            '@type': 'City',
+            name: 'Renningen'
           }
         ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Transport Services Leonberg Renningen",
-          "itemListElement": [
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Transport Services Leonberg Renningen',
+          itemListElement: [
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Express Same-Day Transport",
-                "description": "Same-Day Transport zwischen Leonberg und Renningen mit Direktfahrt"
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Express Same-Day Transport',
+                description: 'Same-Day Transport zwischen Leonberg und Renningen mit Direktfahrt'
               }
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Kurier Express Service",
-                "description": "Kurierdienst für Dokumente zwischen Leonberg und Renningen in unter einer Stunde"
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Kurier Express Service',
+                description:
+                  'Kurierdienst für Dokumente zwischen Leonberg und Renningen in unter einer Stunde'
               }
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Notfall Transport Service",
-                "description": "Notfall-Transporte zwischen Leonberg und Renningen auch außerhalb der Geschäftszeiten"
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Notfall Transport Service',
+                description:
+                  'Notfall-Transporte zwischen Leonberg und Renningen auch außerhalb der Geschäftszeiten'
               }
             }
           ]

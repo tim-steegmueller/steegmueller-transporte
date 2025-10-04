@@ -10,12 +10,17 @@
                 src="/images/logos/steegmueller-logo.png"
                 alt="S. Steegmüller Logo"
                 class="h-10 w-10 object-contain rounded-lg bg-white dark:bg-gray-800 p-1 shadow-sm"
-                loading="lazy" decoding="async" />
+                loading="lazy"
+                decoding="async"
+              />
               <span class="text-lg font-bold text-gray-900 dark:text-white">S. Steegmüller</span>
             </NuxtLink>
           </div>
           <div class="flex items-center space-x-4">
-            <NuxtLink to="/blog" class="text-gray-600 dark:text-gray-300 hover:text-brand-600 font-medium">
+            <NuxtLink
+              to="/blog"
+              class="text-gray-600 dark:text-gray-300 hover:text-brand-600 font-medium"
+            >
               ← Zurück zum Blog
             </NuxtLink>
           </div>
@@ -40,7 +45,9 @@
             Warum regionale Transporte wichtig sind
           </h1>
           <p class="text-xl text-gray-600 dark:text-gray-300">
-            Wir sind jeden Tag zwischen Renningen, Böblingen, Sindelfingen, Leonberg und Stuttgart unterwegs. Diese kurzen Wege und unsere Ortskenntnis sparen Zeit – und oft auch Nerven. Hier erkläre ich, warum regionale Transporte in der Praxis so gut funktionieren.
+            Wir sind jeden Tag zwischen Renningen, Böblingen, Sindelfingen, Leonberg und Stuttgart
+            unterwegs. Diese kurzen Wege und unsere Ortskenntnis sparen Zeit – und oft auch Nerven.
+            Hier erkläre ich, warum regionale Transporte in der Praxis so gut funktionieren.
           </p>
         </header>
 
@@ -50,28 +57,44 @@
             src="/images/transport/transporter-renningen-holz.webp"
             alt="Transporter mit Holzladung in Renningen"
             class="w-full h-64 object-cover rounded-lg shadow-md ring-1 ring-black/5 dark:ring-white/10 brightness-105 contrast-110 saturate-110"
-            loading="lazy" decoding="async" />
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <!-- Article Content -->
         <div class="prose prose-gray dark:prose-invert max-w-none">
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            Aus unserer Erfahrung gilt: Je näher der Dienstleister dran ist, desto reibungsloser läuft der Auftrag. Kurze Abstimmungen, bekannte Anfahrten, weniger Überraschungen – das zahlt direkt auf Pünktlichkeit und Qualität ein.
+            Aus unserer Erfahrung gilt: Je näher der Dienstleister dran ist, desto reibungsloser
+            läuft der Auftrag. Kurze Abstimmungen, bekannte Anfahrten, weniger Überraschungen – das
+            zahlt direkt auf Pünktlichkeit und Qualität ein.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Lokale Expertise und Ortskenntnis</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Lokale Expertise und Ortskenntnis
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
-            Regionale Transportunternehmen kennen ihre Region wie ihre Westentasche. Wir wissen, wo die besten Routen verlaufen, welche Straßen zu bestimmten Zeiten zu meiden sind und wo sich versteckte Hindernisse befinden. Diese Ortskenntnis spart nicht nur Zeit, sondern reduziert auch das Risiko von Verzögerungen.
+            Regionale Transportunternehmen kennen ihre Region wie ihre Westentasche. Wir wissen, wo
+            die besten Routen verlaufen, welche Straßen zu bestimmten Zeiten zu meiden sind und wo
+            sich versteckte Hindernisse befinden. Diese Ortskenntnis spart nicht nur Zeit, sondern
+            reduziert auch das Risiko von Verzögerungen.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Kürzere Wege, weniger Emissionen</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Kürzere Wege, weniger Emissionen
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
-            Kürzere Strecken bedeuten weniger Fahrzeit und Emissionen. Oft lassen sich Touren sinnvoll bündeln – zum Beispiel eine Abholung in Sindelfingen und eine Rückfahrt über Leonberg. Das ist effizient und schont die Umwelt.
+            Kürzere Strecken bedeuten weniger Fahrzeit und Emissionen. Oft lassen sich Touren
+            sinnvoll bündeln – zum Beispiel eine Abholung in Sindelfingen und eine Rückfahrt über
+            Leonberg. Das ist effizient und schont die Umwelt.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Persönlicher Service und Flexibilität</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Persönlicher Service und Flexibilität
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Als Familienbetrieb sind wir direkt erreichbar. Wenn etwas kurzfristig dazwischenkommt, finden wir schnell eine Lösung:
+            Als Familienbetrieb sind wir direkt erreichbar. Wenn etwas kurzfristig dazwischenkommt,
+            finden wir schnell eine Lösung:
           </p>
           <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-6 space-y-2">
             <li>Direkter Kontakt zu den Fahrern</li>
@@ -80,22 +103,33 @@
             <li>Persönliche Betreuung</li>
           </ul>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Wirtschaftliche Vorteile für die Region</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Wirtschaftliche Vorteile für die Region
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
-            Regionale Transportunternehmen stärken die lokale Wirtschaft. Wir beschäftigen Mitarbeiter aus der Region, arbeiten mit lokalen Partnern zusammen und investieren in die örtliche Infrastruktur. Das Geld bleibt in der Region und kommt allen zugute.
+            Regionale Transportunternehmen stärken die lokale Wirtschaft. Wir beschäftigen
+            Mitarbeiter aus der Region, arbeiten mit lokalen Partnern zusammen und investieren in
+            die örtliche Infrastruktur. Das Geld bleibt in der Region und kommt allen zugute.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Zuverlässigkeit durch kurze Reaktionszeiten</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Zuverlässigkeit durch kurze Reaktionszeiten
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
-            Bei Problemen oder unvorhergesehenen Situationen können regionale Anbieter schnell reagieren. Wir sind vor Ort und können bei Bedarf kurzfristig Ersatzfahrzeuge oder zusätzliche Kapazitäten bereitstellen.
+            Bei Problemen oder unvorhergesehenen Situationen können regionale Anbieter schnell
+            reagieren. Wir sind vor Ort und können bei Bedarf kurzfristig Ersatzfahrzeuge oder
+            zusätzliche Kapazitäten bereitstellen.
           </p>
 
-          <div class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-lg p-6 mt-8">
+          <div
+            class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-lg p-6 mt-8"
+          >
             <h3 class="text-lg font-semibold text-brand-900 dark:text-brand-100 mb-3">
               🚚 Ihr regionaler Transportpartner
             </h3>
             <p class="text-brand-800 dark:text-brand-200 mb-4">
-              S. Steegmüller Transportdienstleistungen - Ihr zuverlässiger Partner für regionale Transporte in Renningen, Böblingen, Sindelfingen, Leonberg und Stuttgart.
+              S. Steegmüller Transportdienstleistungen - Ihr zuverlässiger Partner für regionale
+              Transporte in Renningen, Böblingen, Sindelfingen, Leonberg und Stuttgart.
             </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <a
@@ -119,7 +153,9 @@
         <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src="/images/logos/steegmueller-logo.png"
                 alt="S. Steegmüller"
                 class="h-12 w-12 object-contain rounded-lg bg-white dark:bg-gray-800 p-2 shadow-sm"
@@ -147,8 +183,16 @@ import { ClockIcon, PhoneIcon } from '@heroicons/vue/24/outline'
 useHead({
   title: 'Warum regionale Transporte wichtig sind - S. Steegmüller Transport Blog',
   meta: [
-    { name: 'description', content: 'Erfahren Sie, warum regionale Transportdienstleister wie S. Steegmüller wichtige Vorteile bieten: Ortskenntnis, Nachhaltigkeit und persönlicher Service.' },
-    { name: 'keywords', content: 'regionale Transporte, lokaler Service, Renningen, Böblingen, Sindelfingen, Transportdienstleister' }
+    {
+      name: 'description',
+      content:
+        'Erfahren Sie, warum regionale Transportdienstleister wie S. Steegmüller wichtige Vorteile bieten: Ortskenntnis, Nachhaltigkeit und persönlicher Service.'
+    },
+    {
+      name: 'keywords',
+      content:
+        'regionale Transporte, lokaler Service, Renningen, Böblingen, Sindelfingen, Transportdienstleister'
+    }
   ]
 })
 </script>

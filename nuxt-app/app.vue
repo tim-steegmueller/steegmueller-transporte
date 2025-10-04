@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'dark': isDark }">
+  <div :class="{ dark: isDark }">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -26,7 +26,10 @@ const toggleDarkMode = () => {
 onMounted(() => {
   // Load saved theme
   const savedTheme = localStorage.getItem('theme')
-  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (
+    savedTheme === 'dark' ||
+    (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
     isDark.value = true
     document.documentElement.classList.add('dark')
   }

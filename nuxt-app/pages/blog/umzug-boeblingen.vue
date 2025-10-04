@@ -6,7 +6,9 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-4">
             <NuxtLink to="/" class="flex items-center space-x-2">
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src="/images/logos/steegmueller-logo.png"
                 alt="S. Steegmüller Logo"
                 class="h-10 w-10 object-contain rounded-lg bg-white dark:bg-gray-800 p-1 shadow-sm"
@@ -15,7 +17,10 @@
             </NuxtLink>
           </div>
           <div class="flex items-center space-x-4">
-            <NuxtLink to="/blog" class="text-gray-600 dark:text-gray-300 hover:text-brand-600 font-medium">
+            <NuxtLink
+              to="/blog"
+              class="text-gray-600 dark:text-gray-300 hover:text-brand-600 font-medium"
+            >
               ← Zurück zum Blog
             </NuxtLink>
           </div>
@@ -40,13 +45,16 @@
             Umzug in Böblingen: Checkliste
           </h1>
           <p class="text-xl text-gray-600 dark:text-gray-300">
-            Von der Planung bis zur Durchführung - mit unserer erprobten Checkliste wird Ihr Umzug in Böblingen zum Erfolg.
+            Von der Planung bis zur Durchführung - mit unserer erprobten Checkliste wird Ihr Umzug
+            in Böblingen zum Erfolg.
           </p>
         </header>
 
         <!-- Featured Image -->
         <div class="mb-8">
-          <img loading="lazy" decoding="async"
+          <img
+            loading="lazy"
+            decoding="async"
             src="/images/transport/transport-service-boeblingen.webp"
             alt="Transport Service in Böblingen"
             class="w-full h-64 object-cover rounded-lg shadow-md"
@@ -56,12 +64,19 @@
         <!-- Article Content -->
         <div class="prose prose-gray dark:prose-invert max-w-none">
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            Ein Umzug nach Böblingen ist aufregend, aber auch mit viel Organisation verbunden. Als Transportunternehmen mit langjähriger Erfahrung in der Region haben wir bereits zahlreiche Umzüge erfolgreich begleitet. Hier ist unsere bewährte Checkliste für Ihren Umzug.
+            Ein Umzug nach Böblingen ist aufregend, aber auch mit viel Organisation verbunden. Als
+            Transportunternehmen mit langjähriger Erfahrung in der Region haben wir bereits
+            zahlreiche Umzüge erfolgreich begleitet. Hier ist unsere bewährte Checkliste für Ihren
+            Umzug.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">8-12 Wochen vor dem Umzug</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            8-12 Wochen vor dem Umzug
+          </h2>
           <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Planung und Vorbereitung</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              Planung und Vorbereitung
+            </h3>
             <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
               <li>Umzugstermin festlegen</li>
               <li>Transportunternehmen auswählen und beauftragen</li>
@@ -71,9 +86,13 @@
             </ul>
           </div>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">4-6 Wochen vor dem Umzug</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            4-6 Wochen vor dem Umzug
+          </h2>
           <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Organisation und Bestellungen</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              Organisation und Bestellungen
+            </h3>
             <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
               <li>Umzugskartons und Verpackungsmaterial bestellen</li>
               <li>Wichtige Dokumente sammeln und kopieren</li>
@@ -83,9 +102,13 @@
             </ul>
           </div>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">2-3 Wochen vor dem Umzug</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            2-3 Wochen vor dem Umzug
+          </h2>
           <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Packing und Vorbereitung</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              Packing und Vorbereitung
+            </h3>
             <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
               <li>Nicht benötigte Gegenstände aussortieren</li>
               <li>Kartons beschriften und nummerieren</li>
@@ -95,9 +118,13 @@
             </ul>
           </div>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">1 Woche vor dem Umzug</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            1 Woche vor dem Umzug
+          </h2>
           <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Finale Vorbereitungen</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              Finale Vorbereitungen
+            </h3>
             <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
               <li>Kühlschrank leeren und abtauen</li>
               <li>Wäsche waschen und verpacken</li>
@@ -121,7 +148,9 @@
 
           <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Nach dem Umzug</h2>
           <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Einrichtung und Anmeldung</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              Einrichtung und Anmeldung
+            </h3>
             <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
               <li>Wichtige Möbel zuerst aufstellen</li>
               <li>Küche einrichten und funktionsfähig machen</li>
@@ -131,7 +160,9 @@
             </ul>
           </div>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Besondere Tipps für Böblingen</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Besondere Tipps für Böblingen
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-4">
             Als lokaler Transportdienstleister kennen wir Böblingen besonders gut:
           </p>
@@ -142,12 +173,15 @@
             <li>Lokale Geschäfte für letzte Einkäufe kennen</li>
           </ul>
 
-          <div class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-lg p-6 mt-8">
+          <div
+            class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-lg p-6 mt-8"
+          >
             <h3 class="text-lg font-semibold text-brand-900 dark:text-brand-100 mb-3">
               🏠 Professioneller Umzugsservice
             </h3>
             <p class="text-brand-800 dark:text-brand-200 mb-4">
-              S. Steegmüller Transportdienstleistungen unterstützt Sie bei Ihrem Umzug nach Böblingen. Mit unserer Erfahrung und lokalen Kenntnis wird Ihr Umzug zum Erfolg.
+              S. Steegmüller Transportdienstleistungen unterstützt Sie bei Ihrem Umzug nach
+              Böblingen. Mit unserer Erfahrung und lokalen Kenntnis wird Ihr Umzug zum Erfolg.
             </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <a
@@ -171,7 +205,9 @@
         <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src="/images/logos/steegmueller-logo.png"
                 alt="S. Steegmüller"
                 class="h-12 w-12 object-contain rounded-lg bg-white dark:bg-gray-800 p-2 shadow-sm"
@@ -199,8 +235,15 @@ import { ClockIcon, PhoneIcon } from '@heroicons/vue/24/outline'
 useHead({
   title: 'Umzug in Böblingen: Checkliste - S. Steegmüller Transport Blog',
   meta: [
-    { name: 'description', content: 'Komplette Checkliste für Ihren Umzug nach Böblingen. Von der Planung bis zur Durchführung - mit Tipps von S. Steegmüller Transportdienstleistungen.' },
-    { name: 'keywords', content: 'Umzug Böblingen, Umzugscheckliste, Transport Böblingen, Umzugsservice, Renningen' }
+    {
+      name: 'description',
+      content:
+        'Komplette Checkliste für Ihren Umzug nach Böblingen. Von der Planung bis zur Durchführung - mit Tipps von S. Steegmüller Transportdienstleistungen.'
+    },
+    {
+      name: 'keywords',
+      content: 'Umzug Böblingen, Umzugscheckliste, Transport Böblingen, Umzugsservice, Renningen'
+    }
   ]
 })
 </script>

@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-blue-400 via-green-400 to-yellow-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+  <div
+    class="min-h-screen bg-gradient-to-br from-blue-400 via-green-400 to-yellow-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700"
+  >
     <div class="container mx-auto px-4 py-8">
       <div class="max-w-4xl mx-auto">
         <!-- Game Header -->
@@ -7,29 +9,35 @@
           <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
             🚛 Transport Tycoon 🚛
           </h1>
-          <p class="text-xl text-white/90 mb-6">
-            Manage Steegmüller's transport empire!
-          </p>
+          <p class="text-xl text-white/90 mb-6">Manage Steegmüller's transport empire!</p>
         </div>
 
         <!-- Game Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30">
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30"
+          >
             <div class="text-2xl mb-2">💰</div>
             <div class="text-white font-bold text-xl">{{ money }}€</div>
             <div class="text-white/80 text-sm">Geld</div>
           </div>
-          <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30">
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30"
+          >
             <div class="text-2xl mb-2">🚛</div>
             <div class="text-white font-bold text-xl">{{ trucks.length }}</div>
             <div class="text-white/80 text-sm">LKWs</div>
           </div>
-          <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30">
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30"
+          >
             <div class="text-2xl mb-2">📦</div>
             <div class="text-white font-bold text-xl">{{ completedJobs }}</div>
             <div class="text-white/80 text-sm">Aufträge</div>
           </div>
-          <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30">
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30"
+          >
             <div class="text-2xl mb-2">⭐</div>
             <div class="text-white font-bold text-xl">{{ reputation }}</div>
             <div class="text-white/80 text-sm">Ruf</div>
@@ -44,9 +52,12 @@
               📋 Verfügbare Aufträge
             </h2>
             <div class="space-y-3 max-h-64 overflow-y-auto">
-              <div v-for="job in availableJobs" :key="job.id"
-                   class="bg-white/20 rounded-xl p-4 hover:bg-white/30 transition-all cursor-pointer"
-                   @click="selectJob(job)">
+              <div
+                v-for="job in availableJobs"
+                :key="job.id"
+                class="bg-white/20 rounded-xl p-4 hover:bg-white/30 transition-all cursor-pointer"
+                @click="selectJob(job)"
+              >
                 <div class="flex justify-between items-start mb-2">
                   <span class="text-white font-semibold">{{ job.from }} → {{ job.to }}</span>
                   <span class="text-green-300 font-bold">{{ job.reward }}€</span>
@@ -64,26 +75,31 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
             <h2 class="text-2xl font-bold text-white mb-4 flex items-center justify-between">
               🚛 Fuhrpark
-              <button @click="buyTruck"
-                      :disabled="money < truckPrice"
-                      class="bg-green-600 hover:bg-green-500 disabled:bg-gray-500 disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm transition-all">
+              <button
+                :disabled="money < truckPrice"
+                class="bg-green-600 hover:bg-green-500 disabled:bg-gray-500 disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm transition-all"
+                @click="buyTruck"
+              >
                 LKW kaufen ({{ truckPrice }}€)
               </button>
             </h2>
             <div class="space-y-3 max-h-64 overflow-y-auto">
-              <div v-for="truck in trucks" :key="truck.id"
-                   class="bg-white/20 rounded-xl p-4">
+              <div v-for="truck in trucks" :key="truck.id" class="bg-white/20 rounded-xl p-4">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-white font-semibold">{{ truck.name }}</span>
-                  <span :class="truck.status === 'available' ? 'text-green-300' : 'text-yellow-300'">
+                  <span
+                    :class="truck.status === 'available' ? 'text-green-300' : 'text-yellow-300'"
+                  >
                     {{ truck.status === 'available' ? '✅ Verfügbar' : '🚛 Unterwegs' }}
                   </span>
                 </div>
                 <div v-if="truck.currentJob" class="text-white/80 text-sm">
                   {{ truck.currentJob.from }} → {{ truck.currentJob.to }}
                   <div class="w-full bg-white/20 rounded-full h-2 mt-1">
-                    <div class="bg-green-400 h-2 rounded-full transition-all duration-1000"
-                         :style="`width: ${truck.progress}%`"></div>
+                    <div
+                      class="bg-green-400 h-2 rounded-full transition-all duration-1000"
+                      :style="`width: ${truck.progress}%`"
+                    />
                   </div>
                 </div>
               </div>
@@ -93,12 +109,16 @@
 
         <!-- Game Controls -->
         <div class="mt-8 text-center">
-          <button @click="generateNewJobs"
-                  class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold text-lg transition-all hover:scale-105 mr-4">
+          <button
+            class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold text-lg transition-all hover:scale-105 mr-4"
+            @click="generateNewJobs"
+          >
             🔄 Neue Aufträge generieren
           </button>
-          <button @click="resetGame"
-                  class="bg-red-600 hover:bg-red-500 text-white px-6 py-3 rounded-xl font-semibold text-lg transition-all hover:scale-105">
+          <button
+            class="bg-red-600 hover:bg-red-500 text-white px-6 py-3 rounded-xl font-semibold text-lg transition-all hover:scale-105"
+            @click="resetGame"
+          >
             🔄 Spiel zurücksetzen
           </button>
         </div>
@@ -108,8 +128,11 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/30">
             <h3 class="text-white font-bold mb-2">📢 Nachrichten</h3>
             <div class="space-y-1 max-h-32 overflow-y-auto">
-              <div v-for="(message, index) in messages" :key="index"
-                   class="text-white/90 text-sm fade-in">
+              <div
+                v-for="(message, index) in messages"
+                :key="index"
+                class="text-white/90 text-sm fade-in"
+              >
                 {{ message }}
               </div>
             </div>
@@ -126,14 +149,30 @@ import { ref, onMounted, onUnmounted } from 'vue'
 useHead({
   title: 'Transport Tycoon - Kostenloses Logistik-Spiel | S. Steegmüller',
   meta: [
-    { name: 'description', content: 'Spiele Transport Tycoon - das kostenlose Logistik-Spiel von S. Steegmüller. Baue dein Transportunternehmen auf, kaufe LKWs und manage Lieferungen in der Region Stuttgart.' },
-    { name: 'keywords', content: 'Transport Spiel, Logistik Game, LKW Simulator, Transport Tycoon, Stuttgart Transport, Steegmüller Spiel, Browser Game, kostenlos' },
+    {
+      name: 'description',
+      content:
+        'Spiele Transport Tycoon - das kostenlose Logistik-Spiel von S. Steegmüller. Baue dein Transportunternehmen auf, kaufe LKWs und manage Lieferungen in der Region Stuttgart.'
+    },
+    {
+      name: 'keywords',
+      content:
+        'Transport Spiel, Logistik Game, LKW Simulator, Transport Tycoon, Stuttgart Transport, Steegmüller Spiel, Browser Game, kostenlos'
+    },
     { property: 'og:title', content: 'Transport Tycoon - Kostenloses Logistik-Spiel' },
-    { property: 'og:description', content: 'Baue dein eigenes Transportunternehmen auf! Kaufe LKWs, nimm Aufträge an und erobere die Region Stuttgart.' },
+    {
+      property: 'og:description',
+      content:
+        'Baue dein eigenes Transportunternehmen auf! Kaufe LKWs, nimm Aufträge an und erobere die Region Stuttgart.'
+    },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:title', content: 'Transport Tycoon - Kostenloses Logistik-Spiel' },
-    { name: 'twitter:description', content: 'Baue dein eigenes Transportunternehmen auf! Kaufe LKWs, nimm Aufträge an und erobere die Region Stuttgart.' }
+    {
+      name: 'twitter:description',
+      content:
+        'Baue dein eigenes Transportunternehmen auf! Kaufe LKWs, nimm Aufträge an und erobere die Region Stuttgart.'
+    }
   ],
   script: [
     {
@@ -167,23 +206,37 @@ const reputation = ref(50)
 const completedJobs = ref(0)
 const truckPrice = ref(15000)
 
-const trucks = ref([
-  { id: 1, name: 'LKW-001', status: 'available', currentJob: null, progress: 0 }
-])
+const trucks = ref([{ id: 1, name: 'LKW-001', status: 'available', currentJob: null, progress: 0 }])
 
 const availableJobs = ref([])
 const messages = ref([])
 
 // Cities in the region
 const cities = [
-  'Stuttgart', 'Renningen', 'Böblingen', 'Leonberg', 'Sindelfingen',
-  'Calw', 'Pforzheim', 'Karlsruhe', 'Heilbronn', 'Tübingen'
+  'Stuttgart',
+  'Renningen',
+  'Böblingen',
+  'Leonberg',
+  'Sindelfingen',
+  'Calw',
+  'Pforzheim',
+  'Karlsruhe',
+  'Heilbronn',
+  'Tübingen'
 ]
 
 // Cargo types
 const cargoTypes = [
-  'Möbel', 'Baumaterial', 'Maschinen', 'Elektrogeräte', 'Büroausstattung',
-  'Industrieteile', 'Werkzeuge', 'Umzugsgut', 'Baustoffe', 'Ersatzteile'
+  'Möbel',
+  'Baumaterial',
+  'Maschinen',
+  'Elektrogeräte',
+  'Büroausstattung',
+  'Industrieteile',
+  'Werkzeuge',
+  'Umzugsgut',
+  'Baustoffe',
+  'Ersatzteile'
 ]
 
 // Game intervals
@@ -226,7 +279,7 @@ const generateNewJobs = () => {
 }
 
 // Select job for available truck
-const selectJob = (job) => {
+const selectJob = job => {
   const availableTruck = trucks.value.find(t => t.status === 'available')
   if (!availableTruck) {
     addMessage('❌ Kein LKW verfügbar!')
@@ -263,7 +316,7 @@ const buyTruck = () => {
 }
 
 // Add message
-const addMessage = (message) => {
+const addMessage = message => {
   messages.value.unshift(message)
   if (messages.value.length > 5) {
     messages.value = messages.value.slice(0, 5)
@@ -282,7 +335,9 @@ const updateTrucks = () => {
         completedJobs.value++
         reputation.value += Math.floor(Math.random() * 3) + 1
 
-        addMessage(`✅ ${truck.name} hat ${truck.currentJob.cargo} erfolgreich geliefert! +${truck.currentJob.reward}€`)
+        addMessage(
+          `✅ ${truck.name} hat ${truck.currentJob.cargo} erfolgreich geliefert! +${truck.currentJob.reward}€`
+        )
 
         truck.status = 'available'
         truck.currentJob = null
@@ -298,9 +353,7 @@ const resetGame = () => {
   reputation.value = 50
   completedJobs.value = 0
   truckPrice.value = 15000
-  trucks.value = [
-    { id: 1, name: 'LKW-001', status: 'available', currentJob: null, progress: 0 }
-  ]
+  trucks.value = [{ id: 1, name: 'LKW-001', status: 'available', currentJob: null, progress: 0 }]
   availableJobs.value = []
   messages.value = []
   generateNewJobs()
@@ -329,8 +382,14 @@ onUnmounted(() => {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Truck animation */
@@ -339,8 +398,13 @@ onUnmounted(() => {
 }
 
 @keyframes truckMove {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(10px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
 }
 
 /* Hover effects */

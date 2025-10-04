@@ -1,37 +1,40 @@
 <template>
-  <div 
+  <div
     class="relative z-0 overflow-hidden rounded-2xl shadow-lg bg-white/60 dark:bg-gray-800/60 md:h-[420px] h-64 touch-pan-y"
+    role="img"
+    :aria-label="`Bildergalerie: ${images[currentSlide]?.alt || 'Transport Bilder'}`"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
     @mouseenter="pauseAutoSlide"
     @mouseleave="resumeAutoSlide"
-    role="img"
-    :aria-label="`Bildergalerie: ${images[currentSlide]?.alt || 'Transport Bilder'}`"
   >
     <!-- Loading indicator -->
-    <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 z-20">
-      <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600"></div>
+    <div
+      v-if="isLoading"
+      class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 z-20"
+    >
+      <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600" />
     </div>
 
-    <div 
+    <div
       class="flex h-full transition-transform duration-500 ease-in-out"
-      :style="{ 
+      :style="{
         transform: `translateX(-${currentSlide * 100}%)`,
-        width: `${images.length * 100}%` 
+        width: `${images.length * 100}%`
       }"
     >
       <div
         v-for="(image, index) in images"
         :key="index"
         class="relative h-full flex-shrink-0"
-        :style="{ 
+        :style="{
           width: `${100 / images.length}%`,
           flex: `0 0 ${100 / images.length}%`
         }"
       >
         <img
-          :ref="(el) => setImageRef(el, index)"
+          :ref="el => setImageRef(el, index)"
           :src="image.src"
           :alt="image.alt"
           class="w-full h-full object-cover"
@@ -41,39 +44,45 @@
           @load="handleImageLoad(index)"
         />
         <!-- Image overlay for better text readability -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
     </div>
 
     <!-- Navigation Dots -->
-    <div class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+    <div
+      class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10"
+    >
       <button
         v-for="(_, index) in images"
         :key="index"
-        @click="goToSlide(index)"
-        :class="['w-3 h-3 rounded-full transition-all duration-200 border-2',
-                 currentSlide === index ? 'bg-white border-white' : 'bg-white/50 border-white/50 hover:bg-white/75 border-white/75']"
+        :class="[
+          'w-3 h-3 rounded-full transition-all duration-200 border-2',
+          currentSlide === index
+            ? 'bg-white border-white'
+            : 'bg-white/50 border-white/50 hover:bg-white/75 border-white/75'
+        ]"
         :aria-label="`Bild ${index + 1} anzeigen`"
+        @click="goToSlide(index)"
       />
     </div>
 
     <!-- Navigation Arrows -->
-    <button 
-      @click="previousSlide"
+    <button
       class="pointer-events-auto absolute left-4 top-1/2 -translate-y-1/2 bg-black/25 hover:bg-black/40 text-white p-2 rounded-full transition-all z-10 opacity-0 group-hover:opacity-100"
       aria-label="Vorheriges Bild"
+      @click="previousSlide"
     >
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
-    <button 
-      @click="nextSlide"
+    <button
       class="pointer-events-auto absolute right-4 top-1/2 -translate-y-1/2 bg-black/25 hover:bg-black/40 text-white p-2 rounded-full transition-all z-10 opacity-0 group-hover:opacity-100"
       aria-label="Nächstes Bild"
+      @click="nextSlide"
     >
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
   </div>
@@ -116,28 +125,35 @@ const minSwipeDistance = 50
 const isAutoSlidePaused = ref(false)
 
 // Watch for prop changes
-watch(() => props.currentSlide, (newValue) => {
-  if (!images.value.length) return
-  currentSlide.value = Math.min(Math.max(newValue, 0), images.value.length - 1)
-})
+watch(
+  () => props.currentSlide,
+  newValue => {
+    if (!images.value.length) return
+    currentSlide.value = Math.min(Math.max(newValue, 0), images.value.length - 1)
+  }
+)
 
 // Watch for local changes and emit
-watch(currentSlide, (newValue) => {
+watch(currentSlide, newValue => {
   if (!images.value.length) return
   emit('slide-change', newValue)
 })
 
-watch(images, (newImages) => {
-  loadedImages.value = new Set()
-  isLoading.value = newImages.length > 0
-  imageElements.value = []
-  if (newImages.length === 0) {
-    currentSlide.value = 0
-    isLoading.value = false
-  } else if (currentSlide.value >= newImages.length) {
-    currentSlide.value = 0
-  }
-}, { immediate: true })
+watch(
+  images,
+  newImages => {
+    loadedImages.value = new Set()
+    isLoading.value = newImages.length > 0
+    imageElements.value = []
+    if (newImages.length === 0) {
+      currentSlide.value = 0
+      isLoading.value = false
+    } else if (currentSlide.value >= newImages.length) {
+      currentSlide.value = 0
+    }
+  },
+  { immediate: true }
+)
 
 // Navigation methods
 const nextSlide = () => {
@@ -152,7 +168,7 @@ const previousSlide = () => {
   emit('previous')
 }
 
-const goToSlide = (index) => {
+const goToSlide = index => {
   if (!images.value.length) return
   currentSlide.value = index
   emit('slide-change', index)
@@ -164,20 +180,23 @@ const updateLoadingState = () => {
     isLoading.value = false
     return
   }
-  
+
   // Hide loading when all images are loaded or at least the current slide is loaded
-  if (loadedImages.value.size >= images.value.length || loadedImages.value.has(currentSlide.value)) {
+  if (
+    loadedImages.value.size >= images.value.length ||
+    loadedImages.value.has(currentSlide.value)
+  ) {
     isLoading.value = false
   }
 }
 
-const handleImageError = (index) => {
+const handleImageError = index => {
   // Silently handle image loading errors
   loadedImages.value.add(index)
   updateLoadingState()
 }
 
-const handleImageLoad = (index) => {
+const handleImageLoad = index => {
   loadedImages.value.add(index)
   updateLoadingState()
 }
@@ -192,7 +211,7 @@ const setImageRef = (el, index) => {
 }
 
 // Keyboard navigation
-const handleKeydown = (event) => {
+const handleKeydown = event => {
   if (event.key === 'ArrowLeft') {
     previousSlide()
   } else if (event.key === 'ArrowRight') {
@@ -201,17 +220,17 @@ const handleKeydown = (event) => {
 }
 
 // Touch event handlers
-const handleTouchStart = (e) => {
+const handleTouchStart = e => {
   touchStartX.value = e.touches[0].clientX
 }
 
-const handleTouchMove = (e) => {
+const handleTouchMove = e => {
   touchEndX.value = e.touches[0].clientX
 }
 
 const handleTouchEnd = () => {
   const swipeDistance = touchStartX.value - touchEndX.value
-  
+
   if (Math.abs(swipeDistance) > minSwipeDistance) {
     if (swipeDistance > 0) {
       nextSlide()

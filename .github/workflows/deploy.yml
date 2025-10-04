@@ -3,12 +3,52 @@ name: "🚀 Deploy to IONOS"
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+    paths:
+      - 'nuxt-app/**'
+      - '.github/workflows/deploy.yml'
 
 jobs:
-  build-and-deploy:
+  validate:
+    name: "🧪 Validate before deploy"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: "📥 Checkout code"
+        uses: actions/checkout@v4
+
+      - name: "📦 Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "nuxt-app/package-lock.json"
+
+      - name: "📦 Install dependencies"
+        run: |
+          cd nuxt-app
+          npm ci
+
+      - name: "🔍 Run ESLint"
+        run: |
+          cd nuxt-app
+          npm run lint
+
+      - name: "💅 Check Prettier formatting"
+        run: |
+          cd nuxt-app
+          npm run format:check
+
+      - name: "🔎 TypeScript type checking"
+        run: |
+          cd nuxt-app
+          npm run typecheck
+
+  build-and-deploy:
+    name: "🏗️ Build and Deploy"
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     env:
       SITE_URL: https://steegmuellertransporte.de
@@ -41,6 +81,14 @@ jobs:
         run: |
           if [ -z "$NUXT_PUBLIC_EMAILJS_PUBLIC_KEY" ]; then
             echo "❌ FEHLER: EMAILJS_PUBLIC_KEY Secret fehlt!"
+            exit 1
+          fi
+          if [ -z "$NUXT_PUBLIC_EMAILJS_SERVICE_ID" ]; then
+            echo "❌ FEHLER: EMAILJS_SERVICE_ID Secret fehlt!"
+            exit 1
+          fi
+          if [ -z "$NUXT_PUBLIC_EMAILJS_TEMPLATE_ID" ]; then
+            echo "❌ FEHLER: EMAILJS_TEMPLATE_ID Secret fehlt!"
             exit 1
           fi
           echo "✅ EmailJS Secrets sind gesetzt"
@@ -138,7 +186,6 @@ jobs:
           echo "✅ Deploy-Ordner vorbereitet"
 
       - name: "🚚 Deploy via SFTP (with lftp)"
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           set -e
 
@@ -162,8 +209,19 @@ jobs:
 
           echo "✅ SFTP Upload complete!"
 
+      - name: "🏥 Health Check"
+        run: |
+          echo "Waiting 10 seconds for deployment to propagate..."
+          sleep 10
+          
+          echo "Testing site availability..."
+          if curl -f -s -o /dev/null -w "%{http_code}" "${{ env.SITE_URL }}" | grep -q "200"; then
+            echo "✅ Site is responding with 200 OK"
+          else
+            echo "⚠️  Site might not be fully deployed yet"
+          fi
+
       - name: "✅ Deployment Summary"
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "🎉 DEPLOYMENT ERFOLGREICH"
