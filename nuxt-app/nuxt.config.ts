@@ -47,7 +47,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    hostname: 'https://steegmuellertransporte.de',
+    // hostname moved to site.url
     gzip: true,
     exclude: ['/admin/**', '/test/**'],
     // Fix für doppeltes HTML-Encoding in Bild-URLs
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
     },
     // Bild-Sitemap deaktivieren um Encoding-Probleme zu vermeiden
     excludeImages: true,
-    routes: [
+    urls: [
       '/transport-renningen-boeblingen',
       '/transport-renningen-sindelfingen',
       '/transport-renningen-leonberg',
@@ -75,14 +75,19 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    UserAgent: '*',
-    Allow: '/',
-    Disallow: ['/admin/', '/test/'],
-    Sitemap: [
+    // UserAgent moved to groups
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin/', '/test/']
+      }
+    ],
+    sitemap: [
       'https://steegmuellertransporte.de/sitemap.xml',
       'https://steegmuellertransporte.de/sitemap-images.xml'
-    ],
-    Host: 'https://steegmuellertransporte.de'
+    ]
+    // Host is now defined in site.url above
   },
 
   css: ['~/assets/css/main.css'],
