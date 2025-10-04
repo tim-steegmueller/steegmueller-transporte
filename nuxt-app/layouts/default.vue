@@ -299,7 +299,7 @@ const navLinks = [
   { label: 'Kontakt', to: '/kontakt' },
   { label: 'Blog', to: '/blog' },
   { label: 'FAQ', to: '/faq' },
-  { label: '🎮 Game', to: '/transport-game' },
+  { label: 'Game', to: '/transport-game' },
   { label: 'Impressum', to: '/impressum' }
 ]
 
