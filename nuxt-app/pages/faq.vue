@@ -13,11 +13,14 @@
 
       <!-- FAQ Items -->
       <div class="space-y-6">
-        <div v-for="(faq, index) in faqs" :key="index"
-             class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
+        <div
+          v-for="(faq, index) in faqs"
+          :key="index"
+          class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden"
+        >
           <button
-            @click="toggleFaq(index)"
             class="w-full px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-inset hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors"
+            @click="toggleFaq(index)"
           >
             <div class="flex items-center justify-between">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
@@ -32,14 +35,10 @@
             </div>
           </button>
 
-          <transition
-            name="fade-slide"
-            @enter="onEnter"
-            @leave="onLeave"
-          >
+          <transition name="fade-slide" @enter="onEnter" @leave="onLeave">
             <div v-show="openFaqs.includes(index)" class="px-8 pb-6">
               <div class="prose prose-gray dark:prose-invert max-w-none">
-                <div v-html="faq.answer" class="text-gray-600 dark:text-gray-300"></div>
+                <div class="text-gray-600 dark:text-gray-300" v-html="faq.answer" />
               </div>
             </div>
           </transition>
@@ -48,7 +47,9 @@
 
       <!-- Contact CTA -->
       <div class="mt-12 text-center">
-        <div class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-2xl p-8">
+        <div
+          class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-2xl p-8"
+        >
           <h2 class="text-2xl font-bold text-brand-900 dark:text-brand-100 mb-4">
             Weitere Fragen?
           </h2>
@@ -83,7 +84,7 @@ import { ChevronDownIcon, PhoneIcon } from '@heroicons/vue/24/outline'
 // FAQ Data
 const faqs = [
   {
-    question: "Was kostet ein Transport mit S. Steegmüller?",
+    question: 'Was kostet ein Transport mit S. Steegmüller?',
     answer: `<p>Unsere Transportpreise sind individuell und richten sich nach verschiedenen Faktoren:</p>
              <ul>
                <li><strong>Entfernung und Route</strong> - Direktfahrten oder Teilladungen</li>
@@ -94,7 +95,7 @@ const faqs = [
              <p>Unser Fokus liegt auf <strong>Geschäftskunden</strong>, aber wir führen auch ausgewählte Privataufträge durch. Angebote erhalten Sie normalerweise <strong>innerhalb von 2-4 Stunden</strong>, in Ausnahmefällen kann es auch mal länger dauern.</p>`
   },
   {
-    question: "Welche Transportleistungen bieten Sie an?",
+    question: 'Welche Transportleistungen bieten Sie an?',
     answer: `<p>S. Steegmüller bietet ein breites Spektrum an Transportdienstleistungen:</p>
              <ul>
                <li><strong>Direktfahrten</strong> - Exklusive Transporte für Ihre Ladung</li>
@@ -107,7 +108,7 @@ const faqs = [
              <p>Unser Schwerpunkt liegt auf <strong>zuverlässigen B2B-Transporten</strong> für Geschäftskunden.</p>`
   },
   {
-    question: "In welchen Gebieten sind Sie tätig?",
+    question: 'In welchen Gebieten sind Sie tätig?',
     answer: `<p>Unser Hauptgebiet ist die <strong>Region Stuttgart</strong> und <strong>Baden-Württemberg</strong>:</p>
              <ul>
                <li><strong>Stammgebiet:</strong> Stuttgart, Renningen, Böblingen, Leonberg, Sindelfingen</li>
@@ -118,7 +119,7 @@ const faqs = [
              <p>Für Transporte außerhalb unseres Stammgebiets erstellen wir gerne ein individuelles Angebot.</p>`
   },
   {
-    question: "Wie schnell erhalte ich ein Angebot?",
+    question: 'Wie schnell erhalte ich ein Angebot?',
     answer: `<p>Wir legen großen Wert auf <strong>schnelle Reaktionszeiten</strong>:</p>
              <ul>
                <li><strong>Standardangebote:</strong> Innerhalb von 2-4 Stunden</li>
@@ -129,7 +130,7 @@ const faqs = [
              <p>In Ausnahmefällen kann es auch mal länger dauern, zum Beispiel bei sehr spezifischen Anforderungen oder am Wochenende.</p>`
   },
   {
-    question: "Sind Sie auch außerhalb der Geschäftszeiten erreichbar?",
+    question: 'Sind Sie auch außerhalb der Geschäftszeiten erreichbar?',
     answer: `<p>Ja, für <strong>Notfälle und eilige Aufträge</strong> sind wir auch außerhalb der regulären Zeiten da:</p>
              <ul>
                <li><strong>Reguläre Zeiten:</strong> Mo-Fr 08:00-18:00 Uhr</li>
@@ -140,7 +141,7 @@ const faqs = [
              <p>🚨 <strong>Notfall-Transporte</strong> führen wir auch außerhalb der Geschäftszeiten durch - sprechen Sie uns einfach an!</p>`
   },
   {
-    question: "Welche Fahrzeuge stehen zur Verfügung?",
+    question: 'Welche Fahrzeuge stehen zur Verfügung?',
     answer: `<p>Unser Fuhrpark ist optimal auf verschiedene Transportbedürfnisse abgestimmt:</p>
              <ul>
                <li><strong>3,5t LKW</strong> - Für kleinere und mittlere Transporte</li>
@@ -152,7 +153,7 @@ const faqs = [
              <p>Alle Fahrzeuge werden <strong>regelmäßig gewartet</strong> und entsprechen den aktuellen Sicherheitsstandards.</p>`
   },
   {
-    question: "Führen Sie auch Privatumzüge durch?",
+    question: 'Führen Sie auch Privatumzüge durch?',
     answer: `<p>Ja, neben unserem Hauptgeschäft mit <strong>Geschäftskunden</strong> führen wir auch <strong>ausgewählte Privataufträge</strong> durch:</p>
              <ul>
                <li><strong>Privatumzüge</strong> - Besonders in der Region Stuttgart</li>
@@ -163,7 +164,7 @@ const faqs = [
              <p>Kontaktieren Sie Werner Steegmüller direkt für Ihre private Transportanfrage - wir prüfen gerne die Möglichkeiten!</p>`
   },
   {
-    question: "Wie ist die Ladung versichert?",
+    question: 'Wie ist die Ladung versichert?',
     answer: `<p>Ihre Ladung ist bei uns <strong>umfassend abgesichert</strong>:</p>
              <ul>
                <li><strong>Transportversicherung</strong> - Deckung gegen Transportschäden</li>
@@ -174,7 +175,7 @@ const faqs = [
              <p>Details zur Versicherung klären wir gerne individuell bei Ihrer Anfrage. Bei wertvollen Gütern können zusätzliche Versicherungen vereinbart werden.</p>`
   },
   {
-    question: "Wann erhalte ich die Rechnung?",
+    question: 'Wann erhalte ich die Rechnung?',
     answer: `<p>Die <strong>Rechnungsstellung</strong> erfolgt zeitnah nach Transportabschluss:</p>
              <ul>
                <li><strong>Normalfall:</strong> Rechnung erfolgt ein paar Tage nach dem Transport</li>
@@ -185,7 +186,7 @@ const faqs = [
              <p>Bei regelmäßigen Transporten können auch <strong>Sammelrechnungen</strong> vereinbart werden.</p>`
   },
   {
-    question: "Was mache ich bei sehr dringenden Transporten?",
+    question: 'Was mache ich bei sehr dringenden Transporten?',
     answer: `<p>Bei <strong>sehr dringenden und zeitkritischen</strong> Transporten:</p>
              <ul>
                <li><strong>Sofort anrufen:</strong> 0172 755 20 23 (Werner Steegmüller direkt)</li>
@@ -196,7 +197,7 @@ const faqs = [
              <p>🚨 Bei <strong>sehr dringenden Fällen</strong> sollten Sie direkt unter der Mobilnummer anrufen - so erreichen Sie Werner Steegmüller am schnellsten!</p>`
   },
   {
-    question: "Wie plane ich am besten eine Direktfahrt?",
+    question: 'Wie plane ich am besten eine Direktfahrt?',
     answer: `<p>Für eine <strong>stressfreie Direktfahrt</strong> empfehlen wir unsere <a href="/blog/direktfahrten-tipps" class="text-brand-600 hover:text-brand-500 underline">5 Tipps für Direktfahrten</a>:</p>
              <ul>
                <li><strong>Frühzeitige Planung</strong> - Verkehrszeiten und Route beachten</li>
@@ -208,7 +209,7 @@ const faqs = [
              <p>Mehr Details finden Sie in unserem <strong>Blog-Artikel</strong> mit praktischen Tipps aus über 20 Jahren Erfahrung.</p>`
   },
   {
-    question: "Welche Trends gibt es in der Logistik?",
+    question: 'Welche Trends gibt es in der Logistik?',
     answer: `<p>Die <strong>Logistikbranche 2025</strong> wird von mehreren Trends geprägt (Details in unserem <a href="/blog/logistik-trends-2025" class="text-brand-600 hover:text-brand-500 underline">Blog-Artikel</a>):</p>
              <ul>
                <li><strong>Nachhaltigkeit</strong> - CO₂-Reduktion und umweltfreundliche Lösungen</li>
@@ -219,7 +220,7 @@ const faqs = [
              <p>S. Steegmüller setzt auf diese Trends mit <strong>modernem Equipment</strong> und <strong>regionaler Expertise</strong>.</p>`
   },
   {
-    question: "Warum regionale Transporte wählen?",
+    question: 'Warum regionale Transporte wählen?',
     answer: `<p><strong>Regionale Transportdienstleister</strong> bieten entscheidende Vorteile (mehr dazu in unserem <a href="/blog/regionale-transporte" class="text-brand-600 hover:text-brand-500 underline">Blog-Artikel</a>):</p>
              <ul>
                <li><strong>Lokale Expertise</strong> - Kenntnis der Region Stuttgart</li>
@@ -236,7 +237,7 @@ const faqs = [
 const openFaqs = ref([])
 
 // Methods
-const toggleFaq = (index) => {
+const toggleFaq = index => {
   const isOpen = openFaqs.value.includes(index)
   if (isOpen) {
     openFaqs.value = openFaqs.value.filter(i => i !== index)
@@ -246,15 +247,15 @@ const toggleFaq = (index) => {
 }
 
 // Animation methods
-const onEnter = (el) => {
+const onEnter = el => {
   el.style.height = '0'
-  el.offsetHeight // trigger reflow
+  void el.offsetHeight // trigger reflow
   el.style.height = el.scrollHeight + 'px'
 }
 
-const onLeave = (el) => {
+const onLeave = el => {
   el.style.height = el.scrollHeight + 'px'
-  el.offsetHeight // trigger reflow
+  void el.offsetHeight // trigger reflow
   el.style.height = '0'
 }
 
@@ -262,8 +263,16 @@ const onLeave = (el) => {
 useHead({
   title: 'FAQ - Häufig gestellte Fragen | S. Steegmüller Transportdienstleistungen',
   meta: [
-    { name: 'description', content: 'Antworten auf häufig gestellte Fragen zu Transportkosten, Leistungen und Service von S. Steegmüller. Schnelle Angebote, regionale Transporte, Notfall-Service.' },
-    { name: 'keywords', content: 'Transport FAQ, Transportkosten, Preise Spedition, Werner Steegmüller, Geschäftskunden Transport, Privatumzug, Stuttgart Transport' }
+    {
+      name: 'description',
+      content:
+        'Antworten auf häufig gestellte Fragen zu Transportkosten, Leistungen und Service von S. Steegmüller. Schnelle Angebote, regionale Transporte, Notfall-Service.'
+    },
+    {
+      name: 'keywords',
+      content:
+        'Transport FAQ, Transportkosten, Preise Spedition, Werner Steegmüller, Geschäftskunden Transport, Privatumzug, Stuttgart Transport'
+    }
   ],
   script: [
     {

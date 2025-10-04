@@ -10,19 +10,14 @@
       :type="type"
       :required="required"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
       class="w-full pl-12 pr-4 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 rounded-xl focus:outline-none focus:ring-4 focus:ring-brand-500/20 focus:border-brand-500 dark:focus:border-brand-400 text-base transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-500"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
 
 <script setup>
-import {
-  UserIcon,
-  PhoneIcon,
-  MapPinIcon,
-  CalendarIcon
-} from '@heroicons/vue/24/outline'
+import { UserIcon, PhoneIcon, MapPinIcon, CalendarIcon } from '@heroicons/vue/24/outline'
 
 const props = defineProps({
   name: {

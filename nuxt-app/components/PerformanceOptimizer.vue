@@ -7,8 +7,8 @@
       <button
         type="button"
         class="rounded-full p-1 text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-midnight-700"
-        @click="isOpen = !isOpen"
         aria-label="Panel ein- oder ausblenden"
+        @click="isOpen = !isOpen"
       >
         <component :is="isOpen ? MinusIcon : PlusIcon" class="h-4 w-4" />
       </button>
@@ -27,11 +27,17 @@
           </li>
           <li class="flex items-center gap-2">
             <ArrowPathIcon class="h-4 w-4 text-brand-500" />
-            Cache leeren: <code class="rounded bg-neutral-100 px-1.5 py-0.5 text-xs dark:bg-midnight-700">pnpm dev --force</code>
+            Cache leeren:
+            <code class="rounded bg-neutral-100 px-1.5 py-0.5 text-xs dark:bg-midnight-700"
+              >pnpm dev --force</code
+            >
           </li>
           <li class="flex items-center gap-2">
             <BoltIcon class="h-4 w-4 text-brand-500" />
-            Live testen: <code class="rounded bg-neutral-100 px-1.5 py-0.5 text-xs dark:bg-midnight-700">pnpm generate</code>
+            Live testen:
+            <code class="rounded bg-neutral-100 px-1.5 py-0.5 text-xs dark:bg-midnight-700"
+              >pnpm generate</code
+            >
           </li>
         </ul>
       </div>
@@ -41,10 +47,18 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { ArrowPathIcon, BoltIcon, CheckCircleIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline'
+import {
+  ArrowPathIcon,
+  BoltIcon,
+  CheckCircleIcon,
+  MinusIcon,
+  PlusIcon
+} from '@heroicons/vue/24/outline'
 
 const isOpen = ref(true)
-const statusText = computed(() => import.meta.dev ? 'Entwicklungsmodus aktiv' : 'Produktionsbuild')
+const statusText = computed(() =>
+  import.meta.dev ? 'Entwicklungsmodus aktiv' : 'Produktionsbuild'
+)
 </script>
 
 <style scoped>

@@ -7,6 +7,7 @@ Nach dem Merge dieses Feature-Branches in `main` müssen folgende GitHub Secrets
 Gehe zu: **GitHub Repo → Settings → Secrets and variables → Actions → New repository secret**
 
 ### EmailJS Secrets
+
 ```
 Name: NUXT_PUBLIC_EMAILJS_SERVICE_ID
 Value: service_d1apr7q
@@ -23,6 +24,7 @@ Value: ZSw-u5Om2Yu9lL2TA
 ```
 
 ### IONOS SFTP Secrets
+
 ```
 Name: IONOS_HOST
 Value: [Dein IONOS SFTP Host, z.B. access123456789.webspace-data.io]
@@ -41,6 +43,7 @@ Value: [Dein IONOS SFTP Passwort]
 ## ✅ Verification
 
 Nach dem Setzen der Secrets:
+
 1. Push auf `main` Branch
 2. GitHub Actions laufen automatisch
 3. Check: Actions Tab im GitHub Repo

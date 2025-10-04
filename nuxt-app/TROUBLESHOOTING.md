@@ -4,7 +4,7 @@ This document explains the root cause of the "Welcome Page" issue and how it was
 
 ## The Problem: Mixed Application Structure
 
-The website was originally built as a single-page application where all the content and logic resided in one large `app.vue` file. 
+The website was originally built as a single-page application where all the content and logic resided in one large `app.vue` file.
 
 An external tool ("Cursor") attempted to convert this into a modern, multi-page Nuxt application that uses the `pages/` directory for routing. This conversion was incomplete and left the project in a broken state:
 

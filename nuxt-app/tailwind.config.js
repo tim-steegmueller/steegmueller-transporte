@@ -1,13 +1,13 @@
 ﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./app/**/*.vue",
-    "./app.vue",
-    "./error.vue"
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app/**/*.vue',
+    './app.vue',
+    './error.vue'
   ],
   darkMode: 'class',
   theme: {
@@ -48,8 +48,10 @@ module.exports = {
         card: '0 18px 50px -22px rgba(15, 23, 42, 0.45)'
       },
       backgroundImage: {
-        'subtle-grid': "radial-gradient(circle at 1px 1px, rgba(17, 24, 39, 0.08) 1px, transparent 0)",
-        'hero-gradient': 'linear-gradient(135deg, rgba(56, 173, 146, 0.15) 0%, rgba(15, 23, 32, 0.4) 100%)'
+        'subtle-grid':
+          'radial-gradient(circle at 1px 1px, rgba(17, 24, 39, 0.08) 1px, transparent 0)',
+        'hero-gradient':
+          'linear-gradient(135deg, rgba(56, 173, 146, 0.15) 0%, rgba(15, 23, 32, 0.4) 100%)'
       }
     }
   },

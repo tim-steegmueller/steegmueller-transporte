@@ -2,7 +2,18 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/eslint'],
+
+  typescript: {
+    strict: false,
+    typeCheck: false
+  },
+
+  eslint: {
+    config: {
+      standalone: false
+    }
+  },
 
   // Runtime Config für EmailJS
   runtimeConfig: {
@@ -21,11 +32,14 @@ export default defineNuxtConfig({
     '/datenschutz': { prerender: true, headers: { 'Cache-Control': 's-maxage=31536000' } },
     '/blog/**': { prerender: true, headers: { 'Cache-Control': 's-maxage=86400' } },
     '/transport-**': { prerender: true, headers: { 'Cache-Control': 's-maxage=86400' } },
-    '/sitemap.xml': { headers: { 'Content-Type': 'application/xml', 'Cache-Control': 's-maxage=86400' } },
-    '/sitemap-images.xml': { headers: { 'Content-Type': 'application/xml', 'Cache-Control': 's-maxage=86400' } },
+    '/sitemap.xml': {
+      headers: { 'Content-Type': 'application/xml', 'Cache-Control': 's-maxage=86400' }
+    },
+    '/sitemap-images.xml': {
+      headers: { 'Content-Type': 'application/xml', 'Cache-Control': 's-maxage=86400' }
+    },
     '/robots.txt': { headers: { 'Content-Type': 'text/plain', 'Cache-Control': 's-maxage=86400' } }
   },
-
 
   site: {
     url: 'https://steegmuellertransporte.de',
@@ -76,8 +90,8 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {},
-    },
+      autoprefixer: {}
+    }
   },
 
   // Better compression and minification
@@ -93,7 +107,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover',
+      viewport:
+        'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover',
       htmlAttrs: {
         lang: 'de'
       },
@@ -104,7 +119,10 @@ export default defineNuxtConfig({
         { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
       ],
       meta: [
-        { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+        {
+          name: 'robots',
+          content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+        },
         { name: 'googlebot', content: 'index, follow' },
         { name: 'author', content: 'S. Steegmüller Transportdienstleistungen' },
         { name: 'generator', content: 'Nuxt 4' },

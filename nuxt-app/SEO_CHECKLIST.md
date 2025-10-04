@@ -3,6 +3,7 @@
 ## ✅ Bereits implementiert
 
 ### 📊 Technical SEO
+
 - ✅ **Meta Tags**: robots, googlebot, author, generator
 - ✅ **Open Graph**: og:site_name, og:locale, og:type
 - ✅ **Twitter Cards**: twitter:site, twitter:creator
@@ -13,6 +14,7 @@
 - ✅ **Structured Data**: Schema.org LocalBusiness (sollte vorhanden sein)
 
 ### ⚡ Performance
+
 - ✅ **Image Optimization**: WebP Format (alle Bilder konvertiert)
 - ✅ **Code Splitting**: CSS & JS chunks
 - ✅ **Compression**: Gzip/Deflate aktiv
@@ -21,6 +23,7 @@
 - ✅ **Lazy Loading**: Bilder außer erstem Slide
 
 ### 🔒 Security Headers
+
 - ✅ **CSP**: Content-Security-Policy gesetzt
 - ✅ **X-Frame-Options**: DENY
 - ✅ **X-Content-Type-Options**: nosniff
@@ -29,6 +32,7 @@
 ## 🎯 Empfohlene Verbesserungen
 
 ### 1. **Google Search Console einrichten**
+
 ```
 1. Gehe zu: https://search.google.com/search-console
 2. Property hinzufügen: steegmuellertransporte.de
@@ -37,6 +41,7 @@
 ```
 
 ### 2. **Google Business Profile**
+
 ```
 - Erstelle/Optimiere Google My Business
 - Adresse: Kornblumenweg 13, 71272 Renningen
@@ -47,7 +52,9 @@
 ```
 
 ### 3. **Local SEO Keywords** (bereits gut, noch optimieren)
+
 Haupt-Keywords:
+
 - ✅ Transport Renningen
 - ✅ Direktfahrt Stuttgart
 - ✅ Express Lieferung Böblingen
@@ -55,12 +62,14 @@ Haupt-Keywords:
 - ✅ Notfall Transport Sindelfingen
 
 Noch ergänzen:
+
 - Kurierdienst Renningen
 - Spedition Leonberg
 - Eilzustellung Stuttgart
 - Transportunternehmen Böblingen
 
 ### 4. **Performance Optimierungen**
+
 ```javascript
 // nuxt.config.ts - noch hinzufügen:
 experimental: {
@@ -71,6 +80,7 @@ experimental: {
 ```
 
 ### 5. **Favicon & App Icons fehlen!**
+
 ```
 Erstellen:
 - favicon.ico (32x32)
@@ -82,57 +92,62 @@ Erstellen:
 ```
 
 ### 6. **Structured Data erweitern**
+
 ```html
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "S. Steegmüller Transportdienstleistungen",
-  "image": "https://steegmuellertransporte.de/logo.png",
-  "@id": "https://steegmuellertransporte.de",
-  "url": "https://steegmuellertransporte.de",
-  "telephone": "+491727552023",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Kornblumenweg 13",
-    "addressLocality": "Renningen",
-    "postalCode": "71272",
-    "addressCountry": "DE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 48.7667,
-    "longitude": 8.9333
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "08:00",
-    "closes": "18:00"
-  },
-  "sameAs": [
-    "https://www.facebook.com/steegmuellertransporte",
-    "https://www.instagram.com/steegmuellertransporte"
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "S. Steegmüller Transportdienstleistungen",
+    "image": "https://steegmuellertransporte.de/logo.png",
+    "@id": "https://steegmuellertransporte.de",
+    "url": "https://steegmuellertransporte.de",
+    "telephone": "+491727552023",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kornblumenweg 13",
+      "addressLocality": "Renningen",
+      "postalCode": "71272",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.7667,
+      "longitude": 8.9333
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/steegmuellertransporte",
+      "https://www.instagram.com/steegmuellertransporte"
+    ]
+  }
 </script>
 ```
 
 ### 7. **Meta Description überprüfen**
+
 Jede Seite sollte unique Meta Description haben (max 155 Zeichen):
+
 ```javascript
 // Beispiel für index.vue
 useHead({
   meta: [
     {
       name: 'description',
-      content: 'Express-Transporte & Direktfahrten in Renningen, Stuttgart, Böblingen, Leonberg. Same-Day Delivery ✓ Notfall-Service ✓ Seit 1985 ☎ 0172 755 20 23'
+      content:
+        'Express-Transporte & Direktfahrten in Renningen, Stuttgart, Böblingen, Leonberg. Same-Day Delivery ✓ Notfall-Service ✓ Seit 1985 ☎ 0172 755 20 23'
     }
   ]
 })
 ```
 
 ### 8. **Bildoptimierung weiter verbessern**
+
 ```javascript
 // @nuxt/image module nutzen:
 <NuxtImg
@@ -147,7 +162,9 @@ useHead({
 ```
 
 ### 9. **Lighthouse Score Ziel**
+
 Vor Deployment testen:
+
 ```bash
 npm run build
 npm run preview
@@ -155,12 +172,14 @@ npm run preview
 ```
 
 **Ziel-Scores:**
+
 - Performance: >90
 - Accessibility: >95
 - Best Practices: >95
 - SEO: 100
 
 ### 10. **Social Media einrichten**
+
 - Facebook Business Seite
 - Instagram Business
 - Google My Business
@@ -222,16 +241,19 @@ npm run preview
 ---
 
 ✅ **Priorität 1 (sofort):**
+
 - Google Search Console
 - Google My Business
 - Meta Descriptions checken
 
 ✅ **Priorität 2 (diese Woche):**
+
 - Favicons erstellen
 - Structured Data erweitern
 - Lighthouse Test
 
 ✅ **Priorität 3 (nächsten 2 Wochen):**
+
 - Social Media aufbauen
 - Backlinks generieren
 - Content Marketing starten

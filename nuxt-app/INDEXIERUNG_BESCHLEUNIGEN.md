@@ -1,11 +1,13 @@
 # 🔥 SOFORT-INDEXIERUNG für steegmuellertransporte.de
 
 ## ❌ **PROBLEM IDENTIFIZIERT:**
+
 Google findet deine Website **überhaupt nicht** - sie ist noch nicht indexiert!
 
 ## ⚡ **SOFORT-AKTIONEN (HEUTE MACHEN):**
 
 ### 1. **Google Search Console - URL-Prüfung**
+
 ```
 1. Gehe zu Search Console
 2. Gib ein: https://steegmuellertransporte.de
@@ -17,6 +19,7 @@ Google findet deine Website **überhaupt nicht** - sie ist noch nicht indexiert!
 ```
 
 ### 2. **Sitemap mehrfach einreichen**
+
 ```
 In Search Console → Sitemaps:
 - https://steegmuellertransporte.de/sitemap.xml
@@ -24,6 +27,7 @@ In Search Console → Sitemaps:
 ```
 
 ### 3. **Manual Indexing durch Backlinks**
+
 ```
 Sofort-Links erstellen:
 1. LinkedIn Post mit Website-Link
@@ -34,6 +38,7 @@ Sofort-Links erstellen:
 ```
 
 ### 4. **Fetch as Google Alternative**
+
 ```
 Tools nutzen:
 1. https://searchenginereports.net/submit-url-to-google
@@ -42,6 +47,7 @@ Tools nutzen:
 ```
 
 ### 5. **Technische Checks**
+
 ```
 Prüfe in deiner Domain-Verwaltung:
 - DNS korrekt eingestellt?
@@ -52,6 +58,7 @@ Prüfe in deiner Domain-Verwaltung:
 ## 🔍 **WARUM NICHT INDEXIERT?**
 
 Mögliche Gründe:
+
 - ❌ Domain zu neu (< 4 Wochen)
 - ❌ Robots.txt blockiert (jetzt gefixt)
 - ❌ Keine externen Links zur Domain
@@ -60,11 +67,13 @@ Mögliche Gründe:
 ## ⏰ **INDEXIERUNG BESCHLEUNIGEN:**
 
 ### Heute:
+
 - 🔥 URL-Prüfung + Indexierung beantragen
 - 🔥 5 Social Media Posts mit Links
 - 🔥 Google My Business Post
 
 ### Diese Woche:
+
 - 📱 WhatsApp/Telegram Links teilen
 - 📧 Email-Signatur mit Website
 - 📞 Website bei Telefonaten erwähnen
@@ -72,6 +81,7 @@ Mögliche Gründe:
 ## 🎯 **ERFOLG MESSEN:**
 
 ### In Search Console prüfen:
+
 ```
 - Abdeckung → "Gültige Seiten"
 - Leistung → "Impressionen" steigen
@@ -79,6 +89,7 @@ Mögliche Gründe:
 ```
 
 ### Nach 7-14 Tagen:
+
 - Google-Suche: site:steegmuellertransporte.de
 - Lokale Suche: "Spedition Renningen"
 
@@ -97,9 +108,12 @@ Mögliche Gründe:
    - YouTube Video mit Website-Link
 
 ## 📞 **NOTFALL-KONTAKT:**
+
 Wenn nach 2 Wochen nichts passiert:
+
 - Google Webmaster Help Forum
 - Twitter @GoogleSearchLiaison
 
 ---
+
 **WICHTIG:** Geduld! Neue Domains brauchen 2-8 Wochen für vollständige Indexierung.

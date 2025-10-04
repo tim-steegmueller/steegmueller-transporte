@@ -8,8 +8,11 @@
     @mouseleave="resumeAutoSlide"
   >
     <!-- Loading indicator -->
-    <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 z-20">
-      <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600"></div>
+    <div
+      v-if="isLoading"
+      class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 z-20"
+    >
+      <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600" />
     </div>
 
     <!-- Image container with slide effect -->
@@ -35,16 +38,19 @@
           @load="handleImageLoad(index)"
         />
         <!-- Image overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"
+        />
       </div>
     </div>
 
     <!-- Navigation Dots -->
-    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10 pointer-events-auto">
+    <div
+      class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10 pointer-events-auto"
+    >
       <button
         v-for="(_, index) in images"
         :key="index"
-        @click="goToSlide(index)"
         :class="[
           'w-3 h-3 rounded-full transition-all duration-200 border-2',
           currentSlide === index
@@ -52,33 +58,34 @@
             : 'bg-white/50 border-white/50 hover:bg-white/75 hover:border-white/75 hover:scale-105'
         ]"
         :aria-label="`Bild ${index + 1} anzeigen`"
+        @click="goToSlide(index)"
       />
     </div>
 
     <!-- Navigation Arrows -->
     <button
-      @click="previousSlide"
       class="pointer-events-auto absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 md:p-3 rounded-full transition-all duration-200 z-10 opacity-0 group-hover:opacity-100 hover:scale-110"
       aria-label="Vorheriges Bild"
+      @click="previousSlide"
     >
       <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
     <button
-      @click="nextSlide"
       class="pointer-events-auto absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 md:p-3 rounded-full transition-all duration-200 z-10 opacity-0 group-hover:opacity-100 hover:scale-110"
       aria-label="Nächstes Bild"
+      @click="nextSlide"
     >
       <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
   </div>
 </template>
 
 <script setup>
-import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 
 // Props definition
 const props = defineProps({
@@ -95,7 +102,13 @@ const props = defineProps({
 })
 
 // Emits definition
-const emit = defineEmits(['next', 'previous', 'slide-change', 'pause-auto-slide', 'resume-auto-slide'])
+const emit = defineEmits([
+  'next',
+  'previous',
+  'slide-change',
+  'pause-auto-slide',
+  'resume-auto-slide'
+])
 
 // Local reactive state
 const currentSlide = ref(props.currentSlide)
@@ -108,24 +121,31 @@ const touchEndX = ref(0)
 const minSwipeDistance = 50
 
 // Watch for prop changes
-watch(() => props.currentSlide, (newValue) => {
-  if (newValue >= 0 && newValue < props.images.length) {
-    currentSlide.value = newValue
+watch(
+  () => props.currentSlide,
+  newValue => {
+    if (newValue >= 0 && newValue < props.images.length) {
+      currentSlide.value = newValue
+    }
   }
-})
+)
 
 // Watch for local changes and emit
-watch(currentSlide, (newValue) => {
+watch(currentSlide, newValue => {
   emit('slide-change', newValue)
 })
 
 // Watch for images changes
-watch(() => props.images, (newImages) => {
-  loadedImages.value = new Set()
-  if (newImages.length > 0) {
-    isLoading.value = false
-  }
-}, { immediate: true })
+watch(
+  () => props.images,
+  newImages => {
+    loadedImages.value = new Set()
+    if (newImages.length > 0) {
+      isLoading.value = false
+    }
+  },
+  { immediate: true }
+)
 
 // Navigation methods
 const nextSlide = () => {
@@ -140,7 +160,7 @@ const previousSlide = () => {
   emit('previous')
 }
 
-const goToSlide = (index) => {
+const goToSlide = index => {
   if (index >= 0 && index < props.images.length) {
     currentSlide.value = index
     emit('slide-change', index)
@@ -148,11 +168,11 @@ const goToSlide = (index) => {
 }
 
 // Touch event handlers
-const handleTouchStart = (e) => {
+const handleTouchStart = e => {
   touchStartX.value = e.touches[0].clientX
 }
 
-const handleTouchMove = (e) => {
+const handleTouchMove = e => {
   touchEndX.value = e.touches[0].clientX
 }
 
@@ -178,12 +198,12 @@ const resumeAutoSlide = () => {
 }
 
 // Image loading handling
-const handleImageError = (index) => {
+const handleImageError = index => {
   loadedImages.value.add(index)
   updateLoadingState()
 }
 
-const handleImageLoad = (index) => {
+const handleImageLoad = index => {
   loadedImages.value.add(index)
   updateLoadingState()
 }
@@ -195,13 +215,16 @@ const updateLoadingState = () => {
   }
 
   // Hide loading when current slide is loaded or all images are loaded
-  if (loadedImages.value.has(currentSlide.value) || loadedImages.value.size >= props.images.length) {
+  if (
+    loadedImages.value.has(currentSlide.value) ||
+    loadedImages.value.size >= props.images.length
+  ) {
     isLoading.value = false
   }
 }
 
 // Keyboard navigation
-const handleKeydown = (event) => {
+const handleKeydown = event => {
   if (event.key === 'ArrowLeft') {
     previousSlide()
   } else if (event.key === 'ArrowRight') {

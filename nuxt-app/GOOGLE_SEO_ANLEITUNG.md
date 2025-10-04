@@ -1,6 +1,7 @@
 # 🚛 SEO-Anleitung für Spedition Renningen - S. Steegmüller
 
 ## ✅ **PROBLEM GELÖST: Fetch-Fehler behoben**
+
 - Nuxt.config.ts optimiert (static preset entfernt)
 - Route Rules angepasst für bessere Performance
 - Alle Seiten sollten jetzt ohne "fetch not defined" funktionieren
@@ -12,6 +13,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ### 📋 **SOFORT-MASSNAHMEN (Heute machen!)**
 
 #### 1. **Google Search Console einrichten**
+
 ```
 1. Gehe zu: https://search.google.com/search-console/
 2. Klicke "Website hinzufügen"
@@ -21,6 +23,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ```
 
 #### 2. **Google My Business erstellen** ⭐ **WICHTIGSTER SCHRITT**
+
 ```
 1. Gehe zu: https://business.google.com/
 2. Erstelle Profil für "S. Steegmüller Transportdienstleistungen"
@@ -32,6 +35,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ```
 
 #### 3. **Branchenverzeichnisse eintragen**
+
 - ✅ **Gelbe Seiten**: https://www.gelbeseiten.de
 - ✅ **Das Örtliche**: https://www.dasoertliche.de
 - ✅ **11880.com**: https://www.11880.com
@@ -41,6 +45,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ### 🔍 **LOKALE SEO-OPTIMIERUNG**
 
 #### Keywords die du dominieren solltest:
+
 - ✅ "Spedition Renningen" (Hauptkeyword)
 - ✅ "Transport Renningen"
 - ✅ "Umzug Renningen"
@@ -51,6 +56,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ### 📱 **SOCIAL SIGNALS AUFBAUEN**
 
 #### Google-Bewertungen sammeln:
+
 ```
 1. Zufriedene Kunden nach Bewertungen fragen
 2. Google-Bewertungslink direkt senden
@@ -61,6 +67,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ### 🌐 **LINKBUILDING LOKAL**
 
 #### Lokale Links aufbauen:
+
 - ✅ **Renninger Stadtwebsite** - Gewerbeverzeichnis
 - ✅ **IHK Region Stuttgart** - Mitgliedschaft
 - ✅ **Lokale Blogs** - Gastbeiträge über Transport
@@ -69,6 +76,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ### 📊 **MONITORING & TRACKING**
 
 #### Wichtige Tools einrichten:
+
 1. **Google Analytics 4** - Traffic messen
 2. **Google Search Console** - Suchleistung
 3. **Google My Business Insights** - lokale Suchen
@@ -77,12 +85,14 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ### 🚀 **ERWEITERTE MASSNAHMEN**
 
 #### Content-Marketing:
+
 - ✅ Blog-Bereich zu Transportthemen
 - ✅ "Transport von Renningen nach..." Seiten
 - ✅ FAQ zu Speditionsfragen
 - ✅ Ratgeber zu Umzügen
 
 #### Technische Optimierungen:
+
 - ✅ Sitemap bereits vorhanden ✓
 - ✅ Robots.txt optimiert ✓
 - ✅ Schema.org Markup perfekt ✓
@@ -92,6 +102,7 @@ Du hast bereits **exzellentes SEO** - das Problem ist, dass Google deine Seite n
 ## 🎯 **WARUM NICHT GEFUNDEN?**
 
 Du hast **technisch perfektes SEO**, aber:
+
 - ❌ Website noch nicht bei Google indexiert
 - ❌ Kein Google My Business Profil
 - ❌ Keine Backlinks von lokalen Seiten
@@ -114,4 +125,5 @@ Du hast **technisch perfektes SEO**, aber:
 **Nach 2-4 Wochen wirst du bei "Spedition Renningen" gefunden! 🎯**
 
 ---
-*Erstellt am: 21.09.2025 | Für: S. Steegmüller Transportdienstleistungen*
+
+_Erstellt am: 21.09.2025 | Für: S. Steegmüller Transportdienstleistungen_

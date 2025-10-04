@@ -1,24 +1,28 @@
 <template>
   <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20">
-    <h3 class="text-2xl font-bold text-white mb-6 text-center">
-      Schnell-Anfrage senden
-    </h3>
+    <h3 class="text-2xl font-bold text-white mb-6 text-center">Schnell-Anfrage senden</h3>
 
     <!-- Success Message -->
-    <div v-if="formStatus === 'success'" class="mb-4 p-4 bg-green-500/20 border border-green-300/40 rounded-lg backdrop-blur-sm">
+    <div
+      v-if="formStatus === 'success'"
+      class="mb-4 p-4 bg-green-500/20 border border-green-300/40 rounded-lg backdrop-blur-sm"
+    >
       <p class="text-green-100 text-center font-medium">
         ✓ Ihre Notfall-Anfrage wurde versendet! Werner meldet sich schnellstmöglich.
       </p>
     </div>
 
     <!-- Error Message -->
-    <div v-if="formStatus === 'error'" class="mb-4 p-4 bg-red-500/20 border border-red-300/40 rounded-lg backdrop-blur-sm">
+    <div
+      v-if="formStatus === 'error'"
+      class="mb-4 p-4 bg-red-500/20 border border-red-300/40 rounded-lg backdrop-blur-sm"
+    >
       <p class="text-red-100 text-center font-medium">
         ✗ Fehler beim Versenden. Bitte rufen Sie direkt an: 0172 755 20 23
       </p>
     </div>
 
-    <form @submit.prevent="handleSubmit" class="space-y-4">
+    <form class="space-y-4" @submit.prevent="handleSubmit">
       <!-- Name & Phone in one row -->
       <div class="grid md:grid-cols-2 gap-4">
         <input
@@ -47,7 +51,13 @@
       />
 
       <!-- Honeypot -->
-      <input v-model="formData.company" type="text" class="hidden" tabindex="-1" autocomplete="off">
+      <input
+        v-model="formData.company"
+        type="text"
+        class="hidden"
+        tabindex="-1"
+        autocomplete="off"
+      />
 
       <!-- Submit Button -->
       <button
@@ -57,8 +67,19 @@
       >
         <span v-if="isSubmitting" class="flex items-center justify-center">
           <svg class="animate-spin h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            />
           </svg>
           Wird gesendet...
         </span>

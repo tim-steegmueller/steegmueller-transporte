@@ -1,25 +1,35 @@
 <template>
-  <div class="w-full bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover-lift gradient-overlay">
-    <h3 class="text-lg sm:text-2xl font-bold text-center text-gray-900 dark:text-white mb-4 sm:mb-6">Anfrage senden</h3>
+  <div
+    class="w-full bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover-lift gradient-overlay"
+  >
+    <h3
+      class="text-lg sm:text-2xl font-bold text-center text-gray-900 dark:text-white mb-4 sm:mb-6"
+    >
+      Anfrage senden
+    </h3>
 
     <!-- Success Message -->
-    <div v-if="formStatus === 'success'" class="mb-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+    <div
+      v-if="formStatus === 'success'"
+      class="mb-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
+    >
       <p class="text-green-800 dark:text-green-200 text-center font-medium">
         ✓ Ihre Anfrage wurde erfolgreich versendet! Wir melden uns schnellstmöglich bei Ihnen.
       </p>
     </div>
 
     <!-- Error Message -->
-    <div v-if="formStatus === 'error'" class="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+    <div
+      v-if="formStatus === 'error'"
+      class="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+    >
       <p class="text-red-800 dark:text-red-200 text-center font-medium">
-        ✗ Fehler beim Versenden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an: 0172 755 20 23
+        ✗ Fehler beim Versenden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an: 0172
+        755 20 23
       </p>
     </div>
 
-    <form
-      @submit.prevent="handleSubmit"
-      class="space-y-4 w-full"
-    >
+    <form class="space-y-4 w-full" @submit.prevent="handleSubmit">
       <!-- Name & Phone Row -->
       <div class="flex flex-col sm:grid sm:grid-cols-2 gap-3 sm:gap-4">
         <FormField
@@ -41,18 +51,8 @@
 
       <!-- Start & Destination Row -->
       <div class="flex flex-col sm:grid sm:grid-cols-2 gap-3 sm:gap-4">
-        <FormField
-          v-model="formData.start"
-          name="start"
-          placeholder="Startort"
-          icon="MapPinIcon"
-        />
-        <FormField
-          v-model="formData.ziel"
-          name="ziel"
-          placeholder="Zielort"
-          icon="MapPinIcon"
-        />
+        <FormField v-model="formData.start" name="start" placeholder="Startort" icon="MapPinIcon" />
+        <FormField v-model="formData.ziel" name="ziel" placeholder="Zielort" icon="MapPinIcon" />
       </div>
 
       <!-- Date Field -->
@@ -77,7 +77,13 @@
       </div>
 
       <!-- Hidden Honeypot Field -->
-      <input v-model="formData.company" name="company" class="hidden" tabindex="-1" autocomplete="off">
+      <input
+        v-model="formData.company"
+        name="company"
+        class="hidden"
+        tabindex="-1"
+        autocomplete="off"
+      />
 
       <!-- Submit Button -->
       <div class="text-center">
@@ -86,7 +92,10 @@
           :disabled="isSubmitting"
           class="w-full h-12 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-md transition-colors"
         >
-          <span v-if="isSubmitting" class="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
+          <span
+            v-if="isSubmitting"
+            class="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"
+          />
           <span class="text-base">{{ isSubmitting ? 'Wird gesendet...' : 'Anfrage senden' }}</span>
         </button>
         <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 px-2">

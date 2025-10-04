@@ -1,22 +1,23 @@
 ﻿<template>
-  <div class="overflow-x-hidden bg-neutral-50 text-neutral-800 dark:bg-midnight-900 dark:text-neutral-100">
+  <div
+    class="overflow-x-hidden bg-neutral-50 text-neutral-800 dark:bg-midnight-900 dark:text-neutral-100"
+  >
     <HeroSection />
     <ServicesSection />
     <ReviewsSection />
     <ContactSection />
 
-    <div v-if="isDev" class="pointer-events-none">
-    </div>
+    <div v-if="isDev" class="pointer-events-none" />
   </div>
 </template>
 
 <script setup>
-const isDev = import.meta.dev
-
 import HeroSection from '~/components/HeroSection.vue'
 import ServicesSection from '~/components/ServicesSection.vue'
 import ReviewsSection from '~/components/ReviewsSection.vue'
 import ContactSection from '~/components/ContactSection.vue'
+
+const isDev = import.meta.dev
 
 const businessSchema = {
   '@context': 'https://schema.org',
@@ -25,7 +26,8 @@ const businessSchema = {
   url: 'https://steegmuellertransporte.de',
   telephone: '+49 172 755 20 23',
   email: 'kontakt@steegmuellertransporte.de',
-  description: 'Direktfahrten ohne Umladen, feste Touren und Express-Transporte in Renningen, Böblingen, Sindelfingen, Leonberg und Stuttgart.',
+  description:
+    'Direktfahrten ohne Umladen, feste Touren und Express-Transporte in Renningen, Böblingen, Sindelfingen, Leonberg und Stuttgart.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Kornblumenweg 13',
@@ -91,7 +93,8 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Direktfahrten ohne Umladen, Express-Kurier und verlässliche Touren: S. Steegmüller Transportdienstleistungen aus Renningen für Böblingen, Sindelfingen, Leonberg und Stuttgart.'
+      content:
+        'Direktfahrten ohne Umladen, Express-Kurier und verlässliche Touren: S. Steegmüller Transportdienstleistungen aus Renningen für Böblingen, Sindelfingen, Leonberg und Stuttgart.'
     },
     { name: 'robots', content: 'index, follow' },
     { name: 'author', content: 'S. Steegmüller Transportdienstleistungen' },
@@ -99,16 +102,21 @@ useHead({
     { property: 'og:title', content: 'Direktfahrten & Kurier aus Renningen | S. Steegmüller' },
     {
       property: 'og:description',
-      content: 'Familiengeführter Transportdienstleister seit über 30 Jahren. Direktfahrten, feste Touren und Express-Lösungen für Unternehmen in der Region Stuttgart.'
+      content:
+        'Familiengeführter Transportdienstleister seit über 30 Jahren. Direktfahrten, feste Touren und Express-Lösungen für Unternehmen in der Region Stuttgart.'
     },
     { property: 'og:url', content: 'https://steegmuellertransporte.de' },
-          { property: 'og:image', content: 'https://steegmuellertransporte.de/images/transport/transporter-renningen-holz.webp' },
+    {
+      property: 'og:image',
+      content: 'https://steegmuellertransporte.de/images/transport/transporter-renningen-holz.webp'
+    },
     { property: 'og:locale', content: 'de_DE' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'S. Steegmüller Transportdienstleistungen' },
     {
       name: 'twitter:description',
-      content: 'Direktfahrten und Express-Kurier aus Renningen – Böblingen – Sindelfingen – Leonberg – Stuttgart.'
+      content:
+        'Direktfahrten und Express-Kurier aus Renningen – Böblingen – Sindelfingen – Leonberg – Stuttgart.'
     }
   ],
   link: [
@@ -117,8 +125,6 @@ useHead({
     { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/images/favicons/fast-256.png' },
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/favicons/fast-256.png' }
   ],
-  script: [
-    { type: 'application/ld+json', children: JSON.stringify(businessSchema) }
-  ]
+  script: [{ type: 'application/ld+json', children: JSON.stringify(businessSchema) }]
 })
 </script>

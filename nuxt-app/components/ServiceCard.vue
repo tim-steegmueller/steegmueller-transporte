@@ -1,8 +1,12 @@
 ﻿<template>
-  <article class="group flex h-full flex-col justify-between rounded-3xl border border-neutral-200 bg-white/80 p-8 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-card dark:border-midnight-700 dark:bg-midnight-800/70">
+  <article
+    class="group flex h-full flex-col justify-between rounded-3xl border border-neutral-200 bg-white/80 p-8 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-card dark:border-midnight-700 dark:bg-midnight-800/70"
+  >
     <div class="space-y-6">
       <div class="flex items-center gap-4">
-        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 transition group-hover:bg-brand-200 dark:bg-brand-500/20 dark:text-brand-200">
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 transition group-hover:bg-brand-200 dark:bg-brand-500/20 dark:text-brand-200"
+        >
           <component :is="iconComponent" class="h-6 w-6" />
         </div>
         <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">{{ service.title }}</h3>

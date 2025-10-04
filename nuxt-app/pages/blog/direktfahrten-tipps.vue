@@ -1,6 +1,5 @@
 ﻿<template>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
-
     <!-- Article Content -->
     <article class="max-w-4xl mx-auto px-4 py-12">
       <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
@@ -18,7 +17,8 @@
             5 Tipps für stressfreie Direktfahrten
           </h1>
           <p class="text-xl text-gray-600 dark:text-gray-300">
-            Direktfahrten sind dann entspannt, wenn Planung und Abstimmung stimmen. Hier sind fünf kurze Tipps aus unserem Alltag – einfach, praktisch und sofort anwendbar.
+            Direktfahrten sind dann entspannt, wenn Planung und Abstimmung stimmen. Hier sind fünf
+            kurze Tipps aus unserem Alltag – einfach, praktisch und sofort anwendbar.
           </p>
         </header>
 
@@ -28,16 +28,22 @@
             src="/images/transport/direktfahrt-stuttgart-material.webp"
             alt="Direktfahrt nach Stuttgart mit Material"
             class="w-full h-64 object-cover rounded-lg shadow-md ring-1 ring-black/5 dark:ring-white/10 brightness-105 contrast-110 saturate-110"
-            loading="lazy" decoding="async" />
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <!-- Article Content -->
         <div class="prose prose-gray dark:prose-invert max-w-none">
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            Als Transportunternehmen mit über 20 Jahren Erfahrung in der Region Stuttgart wissen wir, was eine erfolgreiche Direktfahrt ausmacht. In diesem Artikel teilen wir unsere bewährten Tipps, damit auch Ihre Transporte reibungslos verlaufen.
+            Als Transportunternehmen mit über 20 Jahren Erfahrung in der Region Stuttgart wissen
+            wir, was eine erfolgreiche Direktfahrt ausmacht. In diesem Artikel teilen wir unsere
+            bewährten Tipps, damit auch Ihre Transporte reibungslos verlaufen.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Planung ist das A und O</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            1. Planung ist das A und O
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-4">
             Gute Vorbereitung spart Zeit. Vor Abfahrt kurz checken:
           </p>
@@ -48,7 +54,9 @@
             <li>Besondere Anforderungen der Ladung</li>
           </ul>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Kommunikation mit dem Kunden</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            2. Kommunikation mit dem Kunden
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
             Kurz anrufen statt schreiben – das vermeidet Missverständnisse. Wichtig sind vor allem:
           </p>
@@ -59,7 +67,9 @@
             <li>Zugangsvoraussetzungen</li>
           </ul>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Sicherheit geht vor</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            3. Sicherheit geht vor
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-4">
             Die Sicherheit Ihrer Ladung und aller Beteiligten hat oberste Priorität:
           </p>
@@ -70,12 +80,17 @@
             <li>Ausreichende Pausen</li>
           </ul>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Flexibilität bei der Routenplanung</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            4. Flexibilität bei der Routenplanung
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
-            Stau kommt vor. Wir haben immer 1–2 Alternativrouten im Kopf (Leonberg/Autobahn vs. Landstraße). Apps helfen – Erfahrung entscheidet.
+            Stau kommt vor. Wir haben immer 1–2 Alternativrouten im Kopf (Leonberg/Autobahn vs.
+            Landstraße). Apps helfen – Erfahrung entscheidet.
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Dokumentation und Nachbereitung</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            5. Dokumentation und Nachbereitung
+          </h2>
           <p class="text-gray-700 dark:text-gray-300 mb-6">
             Kurze Notizen helfen beim nächsten Auftrag:
           </p>
@@ -86,12 +101,15 @@
             <li>Lernpunkte für zukünftige Transporte</li>
           </ul>
 
-          <div class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-lg p-6 mt-8">
+          <div
+            class="bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800 rounded-lg p-6 mt-8"
+          >
             <h3 class="text-lg font-semibold text-brand-900 dark:text-brand-100 mb-3">
               💡 Professioneller Transportservice
             </h3>
             <p class="text-brand-800 dark:text-brand-200 mb-4">
-              Benötigen Sie Unterstützung bei Ihrem Transport? S. Steegmüller Transportdienstleistungen bietet zuverlässige Direktfahrten in der Region Stuttgart.
+              Benötigen Sie Unterstützung bei Ihrem Transport? S. Steegmüller
+              Transportdienstleistungen bietet zuverlässige Direktfahrten in der Region Stuttgart.
             </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <a
@@ -115,7 +133,9 @@
         <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src="/images/logos/steegmueller-logo.png"
                 alt="S. Steegmüller"
                 class="h-12 w-12 object-contain rounded-lg bg-white dark:bg-gray-800 p-2 shadow-sm"
@@ -143,8 +163,15 @@ import { ClockIcon, PhoneIcon } from '@heroicons/vue/24/outline'
 useHead({
   title: '5 Tipps für stressfreie Direktfahrten - S. Steegmüller Transport Blog',
   meta: [
-    { name: 'description', content: 'Bewährte Tipps für erfolgreiche Direktfahrten. Planung, Kommunikation, Sicherheit und mehr von S. Steegmüller Transportdienstleistungen.' },
-    { name: 'keywords', content: 'Direktfahrt, Transport Tipps, Logistik, Stuttgart, Renningen, Transportplanung' }
+    {
+      name: 'description',
+      content:
+        'Bewährte Tipps für erfolgreiche Direktfahrten. Planung, Kommunikation, Sicherheit und mehr von S. Steegmüller Transportdienstleistungen.'
+    },
+    {
+      name: 'keywords',
+      content: 'Direktfahrt, Transport Tipps, Logistik, Stuttgart, Renningen, Transportplanung'
+    }
   ]
 })
 </script>
