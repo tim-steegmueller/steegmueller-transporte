@@ -18,7 +18,7 @@ Empfohlene Seiten: Start, Leistungen, Über uns, Kontakt, Impressum, Datenschutz
 
 ## 2) Voraussetzungen
 
-- Node 20, pnpm 9.
+- Node 20, npm.
 - GitHub Repo mit Branch „main“.
 - IONOS Webspace Zugang via SSH oder SFTP.
 - Cloudflare Account mit Domain eingebunden, Proxy an (kleine Wolke orange).
@@ -28,14 +28,14 @@ Empfohlene Seiten: Start, Leistungen, Über uns, Kontakt, Impressum, Datenschutz
 ## 3) Lokale Einrichtung
 
 ```bash
-pnpm dlx nuxi@latest init steegmueller
+npx nuxi@latest init steegmueller
 cd steegmueller
-pnpm i
-pnpm i -D tailwindcss postcss autoprefixer @nuxt/image @nuxtjs/sitemap @nuxtjs/robots
-pnpm dlx tailwindcss init -p
+npm install
+npm install -D tailwindcss postcss autoprefixer @nuxt/image @nuxtjs/sitemap @nuxtjs/robots
+npx tailwindcss init -p
 ```
 
-**Wichtig:** Bei bestehenden Repositories immer zuerst `cd nuxt-app` vor `pnpm dev`!
+**Wichtig:** Bei bestehenden Repositories immer zuerst `cd nuxt-app` vor `npm run dev`!
 
 `nuxt.config.ts`
 
@@ -144,7 +144,7 @@ Keine kostenpflichtigen IONOS-Zertifikate nötig.
 **Entwicklungsserver starten:**
 ```bash
 cd nuxt-app
-pnpm dev
+npm run dev
 # Website läuft unter http://localhost:3000
 ```
 
@@ -152,7 +152,7 @@ Statischer Export:
 
 ```bash
 cd nuxt-app
-pnpm generate
+npm run generate
 # Output: .output/public
 ```
 
@@ -292,8 +292,8 @@ jobs:
         with: { version: 9 }
       - uses: actions/setup-node@v4
         with: { node-version: 20, cache: 'pnpm' }
-      - run: cd nuxt-app && pnpm i
-      - run: cd nuxt-app && pnpm generate
+      - run: cd nuxt-app && npm install
+      - run: cd nuxt-app && npm run generate
       - name: rsync to ionos
         uses: burnett01/rsync-deployments@7.0.1
         with:

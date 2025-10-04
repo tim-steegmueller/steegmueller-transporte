@@ -92,10 +92,14 @@ git clone https://github.com/tim-steegmueller/steegmueller-transporte.git
 cd steegmueller-transporte/nuxt-app
 
 # Dependencies installieren
-pnpm install
+npm ci
+
+# Environment Variables einrichten
+cp .env.example .env
+# Bearbeite .env mit deinen EmailJS Credentials
 
 # Entwicklungsserver starten
-pnpm dev
+npm run dev
 ```
 
 Die Website ist dann unter `http://localhost:3000` erreichbar.
@@ -104,12 +108,33 @@ Die Website ist dann unter `http://localhost:3000` erreichbar.
 
 ```bash
 # Statischen Build erstellen
-pnpm generate
+npm run generate
 
 # Build testen
-pnpm preview
+npm run preview
 
 # Output liegt in: .output/public/
+```
+
+### **Code Quality**
+
+```bash
+# Linting
+npm run lint          # ESLint prüfen
+npm run lint:fix      # ESLint auto-fix
+
+# Formatting
+npm run format        # Code formatieren
+npm run format:check  # Formatierung prüfen
+
+# Type Checking
+npm run typecheck     # TypeScript prüfen
+
+# Alles zusammen
+npm run validate      # Lint + Format + Typecheck
+
+# Pre-Deployment Validation
+npm run validate:deploy  # Vollständige Prüfung inkl. Build
 ```
 
 ---
@@ -188,10 +213,19 @@ NUXT_PUBLIC_FORMSPREE_ID=your_formspree_id
 
 ## 🚀 **Deployment**
 
-### **IONOS Webspace** (Empfohlen)
+### **Automatisches Deployment via GitHub Actions**
+
+Bei jedem Push auf `main` wird automatisch deployed:
+1. ✅ Code Quality Checks (ESLint, Prettier, TypeScript)
+2. ✅ Build erstellen
+3. ✅ Upload zu IONOS via SFTP
+4. ✅ Health Check
+
+### **Manuelles Deployment**
+
 ```bash
 # Build erstellen
-pnpm generate
+npm run generate
 
 # Upload via rsync
 rsync -avz .output/public/ user@ionos:/path/www/
@@ -257,10 +291,11 @@ pnpm clean        # Cache löschen
 ```
 
 ### **Code Quality**
-- ESLint (geplant)
-- Prettier (geplant)
-- TypeScript (geplant)
-- Husky Git Hooks (geplant)
+- ✅ ESLint mit Vue/Nuxt Rules
+- ✅ Prettier für Code Formatting
+- ✅ TypeScript Type Checking
+- ✅ Husky Pre-commit Hooks
+- ✅ Lint-staged für staged files
 
 ---
 
